@@ -148,7 +148,7 @@ div {
 	margin: 0;
 }
 
-#projects-left {
+.projects-left {
 	display: block;
   	background-color: ffd582;
 	text-align: left;
@@ -160,7 +160,7 @@ div {
 	min-width: 1000px;
 }
 
-#projects-right {
+.projects-right {
 	display: block;
   	background-color: 515151;
 	text-align: right;
@@ -172,7 +172,7 @@ div {
 	min-width: 1000px;
 }
 
-#projects-text-left {
+.projects-text-left {
 	float: right;
 	display: inline-block;
   	background-color: white;
@@ -183,7 +183,7 @@ div {
 	width: 400px;
 }
 
-#projects-text-right {
+.projects-text-right {
 	float: left;
 	display: inline-block;
   	background-color: white;
@@ -194,7 +194,7 @@ div {
 	width: 400px;
 }
 
-#tutorials-intro {
+.tutorials-intro {
 	display: inline-block;
   	background-color: ffd582;
 	text-align: center;
@@ -202,7 +202,7 @@ div {
   	padding: 50px;
 }
 
-#tutorials {
+.tutorials {
 	display: inline-block;
 	text-align: left;
 	margin: 0;
@@ -210,7 +210,7 @@ div {
 	line-height: 25px;
 }
 
-#tutorials-code {
+.tutorials-code {
 	display: inline-block;
 	text-align: left;
 	margin: 0;
@@ -218,7 +218,7 @@ div {
 	line-height: 17px;
 }
 
-#contact {
+.contact {
 	display: inline-block;
   	background-color: ffd582;
 	text-align: center;
@@ -227,7 +227,7 @@ div {
 	height: 28px;
 }
 
-#about {
+.about {
 	display: inline-block;
   	background-color: ffd582;
 	text-align: center;
@@ -235,7 +235,7 @@ div {
 	margin: 0;
 }
 
-#about-text {
+.about-text {
 	display: inline-block;
   	background-color: white;
 	text-align: center;
