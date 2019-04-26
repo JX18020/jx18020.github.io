@@ -2,7 +2,7 @@
     <head>
         <title>Julia Xie Portfolio - OOP</title>
         <link rel="stylesheet" type="text/css" href="../main.css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400|Source+Sans+Pro:200,300,400,600" rel="stylesheet">
     </head>
     <ul>
         <li><a href="https://julia-xie.github.io">Home</a></li>
@@ -27,45 +27,80 @@
     <br>
     <h2>Tutorials</h2>
     <h3>Object Oriented Programming (OOP)</h3>
-        <div id = tutorials>
-            <p2>
-                OOP stands for Object-Oriented Programming. Many programming languages are object-oriented, including Java.
-                <h6>
-                    What Is Object-Oriented Programming?
-                </h6>
-                Object-oriented programming refers the programming paradigm which involves the creation of objects.
-                This is meant to reflect the real world, with each object having attributes and behaviours.
-                OOP hinges on a number of basic concepts, including encapsulation, inheritance, and polymorphism.
-                <h6>
-                    Advantages and Disadvantages of Object-Oriented Programming
-                </h6>
-                Object-oriented programming isn't the only form of programming out there.
-                The two other main programming paradigms are Functional Programming (FP) and Procedural Programming (PP).
-                <p></p>
-                Functional programming passes data through functions and computes data using mathematical functions.
-                Procedural programming works in a series of steps, and is based on the concept of the procedure call.
-                Both paradigms are useful in their own ways, as with object-oriented programming.
-                <p></p>
-                The fact that object-oriented programming treats everything as objects, the objects can be reused in the different application and projects.
-                Furthermore, OOP uses a modular structure, which means that everything is easily maintainable without making big changes to the program.
-                Also, data is able to be hidden, so it is very secure.
-                <h6>
-                    Objects
-                </h6>
-                Objects are the very fundamental aspects of object-oriented programming.
-                They are made to reflect the real world, and can be reused in different applications.
-                Each object has as least one attribute and behaviour.
-                <p></p>
-                For example, a car is an object.
-                Each car has a certain number of wheels, certain number of doors, a colour, a model, etc.
-                They also have behaviours such as driving, parking, and braking.
-                In programming, an attribute or state translates into a <i>field</i> or <i>variables</i>, which can be manipulated.
-                A behaviour can be translated into a method (also known as a function or procedure), and these can be used to manipulate the attributes.
-                <h6>
-                    Classes
-                </h6>
-                Classes in object-oriented programming are essentially a template for an object.
-                Each class serves as a blueprint, and an copy of the class, or an <i>instance</i> of the class, can create any number of said objects.
-            </p2>
-        </div>
+    <div id = tutorials>
+        <p2>
+            OOP stands for <i>Object-Oriented Programming</i>. Many programming languages are object-oriented, including Java.
+            <h6>
+                What Is Object-Oriented Programming?
+            </h6>
+            Object-oriented programming refers the programming paradigm which involves the creation of <i>objects</i>.
+            This is meant to reflect the real world, with each object having attributes and behaviours.
+            OOP hinges on a number of basic concepts, including <i>encapsulation</i>, <i>inheritance</i>, and <i>polymorphism</i>.
+            <h6>
+                Advantages and Disadvantages of Object-Oriented Programming
+            </h6>
+            Object-oriented programming isn't the only form of programming out there.
+            The two other main programming paradigms are <i>Functional Programming (FP)</i> and <i>Procedural Programming (PP)</i>.
+            <p></p>
+            Functional programming passes data through functions and computes data using mathematical functions.
+            Procedural programming works in a series of steps, and is based on the concept of the procedure call.
+            Both paradigms are useful in their own ways, as with object-oriented programming.
+            <p></p>
+            The fact that object-oriented programming treats everything as objects, the objects can be reused in the different application and projects.
+            Furthermore, OOP uses a modular structure, which means that everything is easily maintainable without making big changes to the program.
+            Also, data is able to be hidden, so it is very secure.
+            <h6>
+                Objects
+            </h6>
+            Objects are the very fundamental aspects of object-oriented programming.
+            They are made to reflect the real world, and can be reused in different applications.
+            Each object has as least one <i>attribute</i> and <i>behaviour</i>.
+            <p></p>
+            For example, a car is an object.
+            Each car has a certain number of wheels, certain number of doors, a colour, a model, etc.
+            They also have behaviours such as driving, parking, and braking.
+            In programming, an attribute or state translates into a <i>field</i> or <i>variables</i>, which can be manipulated.
+            A behaviour can be translated into a <i>method</i> (also known as a function or procedure), and these can be used to manipulate the attributes.
+            <h6>
+                Classes
+            </h6>
+            Classes in object-oriented programming are essentially a template for an object.
+            Each class serves as a blueprint, and an copy of the class, or an <i>instance</i> of the class, can create any number of said objects.
+            A constructor is also able to create an object with specific details from the user, or as a default object.
+            For example, here is an implementation of a car:
+            <p></p>
+            <div id="tutorials-code">
+                <c1>
+                    public class Car { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;private String brand; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;private String model; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;private int kilometers; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;private double gas; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;private double tankCapacity; <br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;public Car(String b, String m, double g, double tCap) { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;brand = b; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model = m; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kilometres = 0; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gas = g; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tankCapacity = tCap; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;public void drive(double distance) { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kilometres += distance; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gas -= distance / 5; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;public void gasUp() { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gas = tankCapacity; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                    }
+                </c1>
+            </div>
+            <p></p>
+            The car has the attributes of a brand, model, number of kilometers driven, amount of gas in the tank, and the capacity of the tank.
+            Its behaviours are to drive and fill it tank up.
+            The constructor allows you to create a car with the specifications of its brand, model, amount of gas, and tank capacity, while it sets the number of kilometers to zero (since a new car has not driven anywhere yet).
+        </p2>
+    </div>
 </html>
