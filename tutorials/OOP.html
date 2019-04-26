@@ -46,9 +46,16 @@
             Procedural programming works in a series of steps, and is based on the concept of the procedure call.
             Both paradigms are useful in their own ways, as with object-oriented programming.
             <p></p>
-            The fact that object-oriented programming treats everything as objects, the objects can be reused in the different application and projects.
+            <b>Advantages:</b>
+            <p></p>
+            The fact that object-oriented programming treats everything as objects means that the objects can be reused in the different application and projects.
+            This means that object-oriented programs are faster to develop and a programmer is able to use an existing library rather than create their own.
             Furthermore, OOP uses a modular structure, which means that everything is easily maintainable without making big changes to the program.
             Also, data is able to be hidden, so it is very secure.
+            <p></p>
+            <b>Disadvantages:</b>
+            <p></p>
+            
             <h6>
                 Objects
             </h6>
@@ -107,8 +114,33 @@
             Here is a method which demos the Car class's methods:
             <p></p>
             <div class="tutorials-code">
-
+                <c1>
+                    public class CarDemo {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car c1 = new Car("Honda", "Civic", 38.7, 50.0);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car c2 = new Car("Toyota", "Corolla", 23.4, 40.0);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car c3 = new Car("BMW", "M3", 12.6, 50.0);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car c4 = new Car("Jeep", "Cherokee", 40.3, 70.0);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car c5 = new Car("Ford", "Fusion", 14.5, 60.0);<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c1.drive(50);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c2.drive(1000);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c3.drive(442);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c4.drive(2435);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c5.drive(2323);<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c1.gasUp();<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c2.gasUp();<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c3.gasUp();<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c4.gasUp();<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c5.gasUp();<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    }
+                </c1>
             </div>
+            <p></p>
+            The main method created 5 different cars, with different brands, models, gas, and tank capacity.
+            It then executed the drive() method for each of the cards, and also executed the gasUp() method.
         </p2>
     </div>
 </html>
