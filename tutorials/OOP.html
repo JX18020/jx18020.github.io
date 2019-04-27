@@ -76,6 +76,7 @@
             Classes in object-oriented programming are essentially a template for an object.
             Each class serves as a blueprint, and an copy of the class, or an <i>instance</i> of the class, can create any number of said objects.
             A constructor is also able to create an object with specific details from the user, or as a default object.
+            <p></p>
             For example, here is an implementation of a car:
             <pre>
     public class Car {
@@ -105,10 +106,11 @@
             </pre>
             The car has the attributes of a brand, model, number of kilometers driven, amount of gas in the tank, and the capacity of the tank.
             Its behaviours are to drive and fill its tank up.
-            The constructor allows you to create a car with the specifications of its brand, model, amount of gas, and tank capacity, while it sets the number of kilometers to zero (since a new car has not driven anywhere yet).
+            The constructor allows one to create a car with the specifications of its brand, model, amount of gas, and tank capacity, while it sets the number of kilometers to zero (since a new car has not driven anywhere yet).
             <p></p>
             This car class is only a template to make Car objects, thus it doesn't have a main method.
             We can create a demo class which creates the Car objects and executes their methods.
+            <p></p>
             Here is a method which demos the Car class's methods:
             <p></p>
             <pre>
@@ -142,11 +144,87 @@
             </h6>
             Notice the terms <i>public</i> and <i>private</i> in the sections of code above for the Car class.
             When something is public, it is able to be accessed by other classes and applications.
-            When something is private, no other classes or applications can access that field or method.
+            When something is private, no other classes or applications can access that data.
             This is called encapsulation.
             <p></p>
-            Encapsulation is essentially wrapping, or encapsulating, some form of data so that it cannot be accessed from the outside.
-            
+            Encapsulation (also known as data or information hiding) is essentially wrapping, or encapsulating, some form of data so that it cannot be directly accessed from the outside.
+            However, this doesn't mean that the data cannot be modified or accessed.
+            Through the use of accessor and mutator methods, one is able to access and change the data in a class.
+            An accessor method returns the data that is needed and a mutator method changes the data from the input given as a parameter.
+            <p></p>
+            Here are some examples of accessor and mutator methods (get and set methods) in a Box class:
+            <pre>
+    public class Box {
+        private int length;
+        private int width;
+        private int height;
+        private String colour;
+
+        public Box (int l, int w, int h, String col) {
+            length = l;
+            width = w;
+            height = h;
+            colour = col;
+        }
+
+        public int getLength () {
+            return length;
+        }
+
+        public int getWidth () {
+            return width;
+        }
+
+        public int getHeight () {
+            return height;
+        }
+
+        public String getColour () {
+            return colour;
+        }
+
+        public int getVolume () {
+            return length * width * height;
+        }
+
+        public void setDimensions (int l, int w, int h) {
+            length = l;
+            width = w;
+            height = h;
+        }
+
+        public void setColour (String col) {
+            colour = col;
+        }
+    }
+            </pre>
+            In the above class, all of the variables are set to private, which means that they cannot be directly accessed outside of the Box class.
+            This means that they are encapsulated.
+            The accessor methods, such as getLength(), getColour(), and getVolume() are public, as they need to be used in other classes in order to access the fields.
+            All of the accessor methods return the data type that is the same as the variable that they are trying the access.
+            The mutator methods, setDimensions() and setColour(), are also public, as they need to be used in other classes in order to change the values of the fields.
+            The mutator methods contain at least one parameter, which is used to change the value of one or more fields.
+            They are also mostly void methods, as they do not return anything.
+            <p></p>
+            Here is a demo of the get and set methods:
+            <pre>
+    public class BoxDemo {
+        public static void main (String [] args) {
+            Box b1 = new Box (5, 4, 8, "blue");
+            b1.setDimensions(4, 3, 8);
+            b1.setColour("orange");
+            System.out.println ("Length of box: " + b1.getLength());
+            System.out.println ("Volume of box: " + b1.getVolume());
+            System.out.println ("Colour of box: " + b1.getColour());
+        }
+    }
+            </pre>
+            Output:
+            <pre>
+    Length of box: 4
+    Volume of box: 96
+    Colour of box: orange
+            </pre>
         </p2>
     </div>
 </html>
