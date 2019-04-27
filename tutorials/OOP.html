@@ -33,7 +33,7 @@
             <h6>
                 What Is Object-Oriented Programming?
             </h6>
-            Object-oriented programming refers the programming paradigm which involves the creation of <i>objects</i>.
+            Object-oriented programming refers to the programming paradigm which involves the creation of <i>objects</i>.
             This is meant to reflect the real world, with each object having attributes and behaviours.
             OOP hinges on a number of basic concepts, including <i>encapsulation</i>, <i>inheritance</i>, and <i>polymorphism</i>.
             <h6>
@@ -43,7 +43,7 @@
             The two other main programming paradigms are <i>Functional Programming (FP)</i> and <i>Procedural Programming (PP)</i>.
             <p></p>
             Functional programming passes data through functions and computes data using mathematical functions.
-            Procedural programming works in a series of steps, and is based on the concept of the procedure call.
+            Procedural programming works in a series of steps and is based on the concept of the procedure call.
             Both paradigms are useful in their own ways, as with object-oriented programming.
             <p></p>
             <b>Advantages:</b>
@@ -62,11 +62,11 @@
                 Objects
             </h6>
             Objects are the very fundamental aspects of object-oriented programming.
-            They are made to reflect the real world, and can be reused in different applications.
+            They are made to reflect the real world and can be reused in different applications.
             Each object has as least one <i>attribute</i> and <i>behaviour</i>.
             <p></p>
             For example, a car is an object.
-            Each car has a certain number of wheels, certain number of doors, a colour, a model, etc.
+            Each car has a certain number of wheels, a certain number of doors, a colour, a model, etc.
             They also have behaviours such as driving, parking, and braking.
             In programming, an attribute or state translates into a <i>field</i> or <i>variables</i>, which can be manipulated.
             A behaviour can be translated into a <i>method</i> (also known as a function or procedure), and these can be used to manipulate the attributes.
@@ -74,7 +74,7 @@
                 Classes
             </h6>
             Classes in object-oriented programming are essentially a template for an object.
-            Each class serves as a blueprint, and an copy of the class, or an <i>instance</i> of the class, can create any number of said objects.
+            Each class serves as a blueprint, and a copy of the class, or an <i>instance</i> of the class, can create any number of said objects.
             A constructor is also able to create an object with specific details from the user, or as a default object.
             <p></p>
             For example, here is an implementation of a car:
@@ -145,11 +145,11 @@
             Notice the terms <i>public</i> and <i>private</i> in the sections of code above for the Car class.
             When something is public, it is able to be accessed by other classes and applications.
             When something is private, no other classes or applications can access that data.
-            This is called encapsulation.
+            This is called <i>encapsulation</i>.
             <p></p>
             Encapsulation (also known as data or information hiding) is essentially wrapping, or encapsulating, some form of data so that it cannot be directly accessed from the outside.
             However, this doesn't mean that the data cannot be modified or accessed.
-            Through the use of accessor and mutator methods, one is able to access and change the data in a class.
+            Through the use of <i>accessor</i> and <i>mutator methods</i>, one is able to access and change the data in a class.
             An accessor method returns the data that is needed and a mutator method changes the data from the input given as a parameter.
             <p></p>
             Here are some examples of accessor and mutator methods (get and set methods) in a Box class:
@@ -225,6 +225,110 @@
     Volume of box: 96
     Colour of box: orange
             </pre>
+            <h6>
+                Inheritance
+            </h6>
+            Inheritance is when a class <i>inherits</i> the attributes and behaviours of another class.
+            This means that all the methods (excluding constructors) and variables in the inherited class are able to be used in another class.
+            <p></p>
+            <b>Superclasses & Subclasses</b>
+            <p></p>
+            Objects often share similar characteristics with each other.
+            For example, a cat and a dog share the characteristics of a mammal, since they are both mammals.
+            A mammal and a reptile share the characteristics of an animal, since they are both animals.
+            This is reflected in object-oriented programming.
+            <p></p>
+            A <i>class hierarchy tree</i> can be formed, with the most general class, the <i>Object class</i>, at the top, and more specific classes at the bottom (ex. a cat).
+            Each class in the tree is derived from another class, with the exception of the Object class, which is at the very top of the tree.
+            The derived class is called the <i>subclass</i> and the class from which the subclass is deriving from is called the <i>superclass</i>.
+            Every class is implicitly a subclass of the Object class.
+            A subclass inherits all of the methods and variables of its superclass.
+            The exception to this are constructors which cannot be inherited, but can be invoked from the subclass.
+            <p></p>
+            To inherit a class, the extends keyword must be used.
+            For example, a Cat <i>is a</i> Mammal, a Dog <i>is a</i> Mammal, and a Mammal <i>is an</i> Animal.
+            <p></p>
+            Here is how that would look like:
+            <pre>
+    public class Animal {
+        ...
+    }
+
+    public class Mammal extends Animal {
+        ...
+    }
+
+    public class Cat extends Mammal {
+        ...
+    }
+
+    public class Dog extends Mammal {
+        ...
+    }
+            </pre>
+            In this case, the Mammal class inherits all of the features of the Animal class, and the Cat class inherits all of the features from both the Animal and Mammal classes.
+            <p></p>
+            <b>Casting</b>
+            <p></p>
+            In object-oriented programming, an object is able to be <i>upcasted</i> and <i>downcasted</i>.
+            This just means that an object can be labeled as its superclass or its subclass.
+            <p></p>
+            Upcasting is always allowed, and thus Java upcasts automatically. <br>
+            This means that you are able to do
+            <pre>
+    Animal a1 = new Cat();
+            </pre>
+            or
+            <pre>
+    Mammal m1 = new Dog();
+            </pre>
+            or
+            <pre>
+    Animal a2 = new Mammal();
+            </pre>
+            without any problems.
+            <p></p>
+            Downcasting, however, must be done manually, as not every object can be downcasted to any subclass.
+            For example, if an Animal is created by using the Animal() constructor, it cannot be downcasted to any of its subclasses since it is neither a Mammal nor a Dog nor a Cat.
+            However, if a Dog was upcasted first to an Animal, it is able to be downcasted to a Mammal or back to a Dog.
+            It cannot be downcasted to a Cat, however, as a Dog is not a Cat.
+            <p></p>
+            Here are some examples of downcasting which will work:
+            <pre>
+    Animal a3 = new Dog();  // automatic upcasting from Dog to Animal
+    Mammal m2 = (Mammal) a3;    // downcasting from Animal to Mammal
+    Dog d1 = (Dog) m2;  // downcasting from Mammal to Dog
+
+    Animal a4 = new Cat();  // automatic upcasting from Cat to Animal
+    Cat c1 = (Cat) a4;    // downcasting from Animal to Cat
+
+    Animal a5 = new Dog();  // automatic upcasting from Dog to Animal
+    Mammal m3 = (Dog) a5;   // downcasting from Animal to Dog and then automatic upcasting to Mammal
+            </pre>
+            And here are some examples of downcasting which will fail and throw a ClassCastException:
+            <pre>
+    Animal a6 = new Cat();
+    Dog d2 = (Dog) a6;
+
+    Mammal m4 = new Mammal();
+    Cat c2 = (Cat) m4;
+            </pre>
+            For the first failed example, a Dog is indeed an Animal.
+            However, the Animal is just a Cat which has been upcasted to an Animal and is therefore not a Dog.
+            For the second failed example, a Cat is indeed a Mammal.
+            However, the Mammal object had been created using the Mammal() constructor, which means that the Mammal is not a Cat.
+            <p></p>
+            <b>Overriding Methods</b>
+            <p></p>
+            In a OOP program, a subclass is able to <i>override</i> a method from its superclass.
+            This means that when the method is called in the subclass, it will use the overridden method rather than the original from the superclass.
+            <h6>
+                Interfaces
+            </h6>
+            An <i>interface</i> is like a class, but it can only contain constants, method signatures, default methods, static methods, and nested types.
+            All the methods in an interface are implicitly <i>public</i> and <i>abstract</i>.
+            Abstract methods contain no braces and end with a semicolon, acting like a template for a concrete method.
+
         </p2>
     </div>
 </html>
