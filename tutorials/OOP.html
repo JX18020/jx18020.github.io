@@ -2,7 +2,7 @@
     <head>
         <title>Julia Xie Portfolio - OOP</title>
         <link rel="stylesheet" type="text/css" href="../main.css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400|Source+Sans+Pro:200,300,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet">
     </head>
     <ul>
         <li><a href="https://julia-xie.github.io">Home</a></li>
@@ -55,7 +55,9 @@
             <p></p>
             <b>Disadvantages:</b>
             <p></p>
-            One of the main disadvantages is that OOP programs can be tricky to create. A programmer needs to have 
+            One of the main disadvantages is that OOP programs can be tricky to create.
+            A programmer needs to have proper design skills and programming skills.
+            Not only that, an object-oriented program needs to be extensively planned out before any coding can begin.
             <h6>
                 Objects
             </h6>
@@ -75,72 +77,76 @@
             Each class serves as a blueprint, and an copy of the class, or an <i>instance</i> of the class, can create any number of said objects.
             A constructor is also able to create an object with specific details from the user, or as a default object.
             For example, here is an implementation of a car:
-            <p></p>
-            <div class="tutorials-code">
-                <c1>
-                    public class Car { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;private String brand; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;private String model; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;private int kilometers; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;private double gas; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;private double tankCapacity; <br>
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;public Car(String b, String m, double g, double tCap) { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;brand = b; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model = m; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kilometres = 0; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gas = g; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tankCapacity = tCap; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;public void drive(double distance) { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kilometres += distance; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gas -= distance / 5; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;public void gasUp() { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gas = tankCapacity; <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
-                    }
-                </c1>
-            </div>
-            <p></p>
+            <pre>
+    public class Car {
+        private String brand;
+        private String model;
+        private int kilometers;
+        private double gas;
+        private double tankCapacity;
+
+        public Car(String b, String m, double g, double tCap) {
+            brand = b;
+            model = m;
+            kilometres = 0;
+            gas = g;
+            tankCapacity = tCap;
+        }
+
+        public void drive(double distance) {
+            kilometres += distance;
+            gas -= distance / 5;
+        }
+
+        public void gasUp() {
+            gas = tankCapacity;
+        }
+    }
+            </pre>
             The car has the attributes of a brand, model, number of kilometers driven, amount of gas in the tank, and the capacity of the tank.
-            Its behaviours are to drive and fill it tank up.
+            Its behaviours are to drive and fill its tank up.
             The constructor allows you to create a car with the specifications of its brand, model, amount of gas, and tank capacity, while it sets the number of kilometers to zero (since a new car has not driven anywhere yet).
             <p></p>
             This car class is only a template to make Car objects, thus it doesn't have a main method.
             We can create a demo class which creates the Car objects and executes their methods.
             Here is a method which demos the Car class's methods:
             <p></p>
-            <div class="tutorials-code">
-                <c1>
-                    public class CarDemo {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car c1 = new Car("Honda", "Civic", 38.7, 50.0);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car c2 = new Car("Toyota", "Corolla", 23.4, 40.0);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car c3 = new Car("BMW", "M3", 12.6, 50.0);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car c4 = new Car("Jeep", "Cherokee", 40.3, 70.0);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car c5 = new Car("Ford", "Fusion", 14.5, 60.0);<br>
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c1.drive(50);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c2.drive(1000);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c3.drive(442);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c4.drive(2435);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c5.drive(2323);<br>
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c1.gasUp();<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c2.gasUp();<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c3.gasUp();<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c4.gasUp();<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c5.gasUp();<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                    }
-                </c1>
-            </div>
+            <pre>
+    public class CarDemo {
+        public static void main(String[] args) {
+            Car c1 = new Car("Honda", "Civic", 38.7, 50.0);
+            Car c2 = new Car("Toyota", "Corolla", 23.4, 40.0);
+            Car c3 = new Car("BMW", "M3", 12.6, 50.0);
+            Car c4 = new Car("Jeep", "Cherokee", 40.3, 70.0);
+            Car c5 = new Car("Ford", "Fusion", 14.5, 60.0);
+
+            c1.drive(50);
+            c2.drive(1000);
+            c3.drive(442);
+            c4.drive(2435);
+            c5.drive(2323);
+
+            c1.gasUp();
+            c2.gasUp();
+            c3.gasUp();
+            c4.gasUp();
+            c5.gasUp();
+        }
+    }
+            </pre>
             <p></p>
             The main method created 5 different cars, with different brands, models, gas, and tank capacity.
             It then executed the drive() method for each of the cards, and also executed the gasUp() method.
+            <h6>
+                Encapsulation
+            </h6>
+            Notice the terms <i>public</i> and <i>private</i> in the sections of code above for the Car class.
+            When something is public, it is able to be accessed by other classes and applications.
+            When something is private, no other classes or applications can access that field or method.
+            This is called encapsulation.
+            <p></p>
+            Encapsulation is essentially wrapping, or encapsulating, some form of data so that it cannot be accessed from the outside.
+            
         </p2>
     </div>
 </html>

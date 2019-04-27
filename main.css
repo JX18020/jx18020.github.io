@@ -65,13 +65,9 @@ p2 {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 20px;
 }
-
-c1 {
-	font-family: 'Source Code Pro', monospace;
-	text-align: left;
-	color: black;
+pre {
 	font-size: 14px;
-	font-weight: 300;
+	line-height: 17px;
 }
 
 ul {
@@ -208,14 +204,6 @@ div {
 	margin: 0;
 	padding: 3% 10% 10% 10%;
 	line-height: 25px;
-}
-
-.tutorials-code {
-	display: inline-block;
-	text-align: left;
-	margin: 0;
-	padding: 0 5% 0 5%;
-	line-height: 17px;
 }
 
 .contact {
