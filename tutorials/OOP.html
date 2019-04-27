@@ -246,6 +246,7 @@
             The exception to this are constructors which cannot be inherited, but can be invoked from the subclass.
             <p></p>
             To inherit a class, the extends keyword must be used.
+            A class can only extend one class at a time.
             For example, a Cat <i>is a</i> Mammal, a Dog <i>is a</i> Mammal, and a Mammal <i>is an</i> Animal.
             <p></p>
             Here is how that would look like:
@@ -322,13 +323,134 @@
             <p></p>
             In a OOP program, a subclass is able to <i>override</i> a method from its superclass.
             This means that when the method is called in the subclass, it will use the overridden method rather than the original from the superclass.
-            <h6>
-                Interfaces
-            </h6>
-            An <i>interface</i> is like a class, but it can only contain constants, method signatures, default methods, static methods, and nested types.
-            All the methods in an interface are implicitly <i>public</i> and <i>abstract</i>.
-            Abstract methods contain no braces and end with a semicolon, acting like a template for a concrete method.
+            <p></p>
+            Here is a simple example demonstrating overriding methods:
+            <pre>
+    public class A {
+        public void printClass() {
+            System.out.println ("Class A");
+        }
+    }
 
+    public class B extends A {
+        public void printClass() {
+            System.out.println ("Class B");
+        }
+    }
+
+    public class ClassTester {
+        public static void main (String [] args) {
+            A a = new A();
+            B b = new B();
+            a.printClass();
+            b.printClass();
+        }
+    }
+            </pre>
+            Output:
+            <pre>
+    Class A
+    Class B
+            </pre>
+            In the above example, class A has a method printClass() which is inherited by class B because B extends A.
+            printClass() is then overridden in B.
+            In the tester class, one object of each class is created and the same method name is called.
+            While A executes the original method, B executes the overridden one.
+            <p></p>
+            One of the most commonly overridden methods is the toString() method which is from the Object class.
+            It is usually overridden to be able to output useful information to the user, rather than the hash value.
+            <h6>
+                Polymorphism
+            </h6>
+            Polymorphism refers to the idea that a single action can be performed in many different ways.
+            This concept can also be applied to object-oriented programming.
+            Multiple subclasses of a superclass can execute each method differently, and polymorphism allows each method to be performed in the intended way.
+            <p></p>
+            When a number of different instances of subclasses are upcasted to the same superclass and a shared method from the superclass is called, polymorphism will occur.
+            If the method is overridden in a subclass, the overridden method from each respective subclass will be called rather than the one from the superclass.
+            This allows each object to perform an action in a different way, despite sharing many of the same attributes and behaviours.
+            <p></p>
+            Here is an example of polymorphism:
+            <pre>
+    public class Bank {
+        public double getInterestRate() {
+            return 0;
+        }
+    }
+
+    public class RBC extends Bank{
+        public double getInterestRate() {
+            return 6.5;
+        }
+    }
+
+    public class TD extends Bank{
+        public double getInterestRate() {
+            return 4.3;
+        }
+    }
+
+    public class BMO extends Bank{
+        public double getInterestRate() {
+            return 8.2;
+        }
+    }
+
+    public class BankDemo {
+        public static void main (String [] args) {
+            Bank rbc = new RBC();
+            Bank td = new TD();
+            Bank bmo = new BMO();
+            System.out.println ("RBC: " + rbc.getInterestRate() + "%");
+            System.out.println ("TD: " + td.getInterestRate() + "%");
+            System.out.println ("BMO: " + bmo.getInterestRate() + "%");
+        }
+    }
+            </pre>
+            Output:
+            <pre>
+    RBC: 6.5%
+    TD: 4.3%
+    BMO: 8.2%
+            </pre>
+            <h6>
+                Abstraction
+            </h6>
+            Abstraction is the concept where only the functionality of a program is displayed to the user, and the other implementation is hidden.
+            In Java, abstraction can be achieved in two ways, abstract classes and interfaces.
+            <p></p>
+            <b>Abstract Classes and Methods</b>
+            <p></p>
+            An <i>abstract class</i> may or may not have abstract methods.
+            Abstract methods are methods which do not contain braces and end with a semicolon.
+            In other words, abstract methods do not have any implementation.
+            Although an abstract class may not have abstract methods, if a class has at least one abstract method, it must be declared as an abstract class.
+            <pre>
+    public abstract class Superclass {
+        public abstract void foo();
+    }
+            </pre>
+            An abstract class cannot be <i>instantiated</i>, only subclassed, which means an object cannot be created out of it.
+            When an abstract class is subclassed, the subclass must override and provide implementations for all abstract methods.
+            <pre>
+    public abstract class Superclass {
+        public abstract void foo();
+    }
+
+    public class Subclass extends Superclass{
+        public void foo() {
+            System.out.println ("foo");
+        }
+    }
+            </pre>
+            <p></p>
+            <b>Interfaces</b>
+            <p></p>
+            An <i>interface</i> is like a class, but it can only contain constants, method signatures, default methods, static methods, and nested types.
+            This means that there are no variables, and implementation cannot be provided for any of the methods.
+            All the methods in an interface are implicitly public and abstract.
+            <p></p>
+            
         </p2>
     </div>
 </html>
