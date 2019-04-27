@@ -245,7 +245,7 @@
             A subclass inherits all of the methods and variables of its superclass.
             The exception to this are constructors which cannot be inherited, but can be invoked from the subclass.
             <p></p>
-            To inherit a class, the extends keyword must be used.
+            To inherit a class, the <i>extends</i> keyword must be used.
             A class can only extend one class at a time.
             For example, a Cat <i>is a</i> Mammal, a Dog <i>is a</i> Mammal, and a Mammal <i>is an</i> Animal.
             <p></p>
@@ -413,6 +413,7 @@
     TD: 4.3%
     BMO: 8.2%
             </pre>
+            Although all three banks are instantiated as a Bank object, their individual getInterestRate() methods were executed when they were called.
             <h6>
                 Abstraction
             </h6>
@@ -446,11 +447,53 @@
             <p></p>
             <b>Interfaces</b>
             <p></p>
-            An <i>interface</i> is like a class, but it can only contain constants, method signatures, default methods, static methods, and nested types.
+            One can think of an <i>interface</i> as a contract between the real world and the code.
+            It lays out the methods of a class, which <i>must</i> be implemented in the class.
+            An interface is like a class, but it can only contain constants, method signatures, default methods, static methods, and nested types.
             This means that there are no variables, and implementation cannot be provided for any of the methods.
-            All the methods in an interface are implicitly public and abstract.
+            Additionally, all the methods in an interface are implicitly public and abstract.
+            Like abstract classes, interfaces cannot be instantiated.
             <p></p>
-            
+            To use an interface, a class must use the <i>implements</i> keyword.
+            Unlike extending classes, a class may implement more than one interface.
+            An interface cannot be extended a class, however, but an interface may be extended by another interface.
+            <p></p>
+            Here is the syntax for an interface:
+            <pre>
+    public interface Interface1 {
+        void foo(); // interfaces are implicitly public and abstract so the keywords are not needed
+    }
+
+    public interface Interface2 extends Interface1 {
+        int foo2 ();
+    }
+
+    public interface Interface 3 {
+        double foo3 (int bar);
+    }
+
+    public class Foo implements Interface2 implements Interface3 {
+        public void foo() {
+            ...
+        }
+
+        public int foo2() {
+            ...
+        }
+
+        public double foo3 (int bar) {
+            ...
+        }
+    }
+            </pre>
+            Interfaces can be used when multiple unrelated classes need to use the same function.
+            Furthermore, interfaces can be implemented when the interface doesn't know anything about the objects implementing them.
+            This is because interfaces are completely abstract and it allows code to be reused very easily.
+            Some commonly implemented interfaces are the Comparable interface and the Cloneable interface.
+            Many classes implement these interfaces, even though they are completely unrelated.
+            For example, both the BigInteger class and the Calendar class in Java implement Comparable, even though they have nothing to do with each other.
+            Moreover, the Comparable interface does not know that these classes implement Comparable, so any class can implement this interface.
+            The same applies to the Cloneable interface.
         </p2>
     </div>
 </html>
