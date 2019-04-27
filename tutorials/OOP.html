@@ -160,40 +160,40 @@
         private int height;
         private String colour;
 
-        public Box (int l, int w, int h, String col) {
+        public Box(int l, int w, int h, String col) {
             length = l;
             width = w;
             height = h;
             colour = col;
         }
 
-        public int getLength () {
+        public int getLength() {
             return length;
         }
 
-        public int getWidth () {
+        public int getWidth() {
             return width;
         }
 
-        public int getHeight () {
+        public int getHeight() {
             return height;
         }
 
-        public String getColour () {
+        public String getColour() {
             return colour;
         }
 
-        public int getVolume () {
+        public int getVolume() {
             return length * width * height;
         }
 
-        public void setDimensions (int l, int w, int h) {
+        public void setDimensions(int l, int w, int h) {
             length = l;
             width = w;
             height = h;
         }
 
-        public void setColour (String col) {
+        public void setColour(String col) {
             colour = col;
         }
     }
@@ -209,13 +209,13 @@
             Here is a demo of the get and set methods:
             <pre>
     public class BoxDemo {
-        public static void main (String [] args) {
-            Box b1 = new Box (5, 4, 8, "blue");
+        public static void main(String [] args) {
+            Box b1 = new Box(5, 4, 8, "blue");
             b1.setDimensions(4, 3, 8);
             b1.setColour("orange");
-            System.out.println ("Length of box: " + b1.getLength());
-            System.out.println ("Volume of box: " + b1.getVolume());
-            System.out.println ("Colour of box: " + b1.getColour());
+            System.out.println("Length of box: " + b1.getLength());
+            System.out.println("Volume of box: " + b1.getVolume());
+            System.out.println("Colour of box: " + b1.getColour());
         }
     }
             </pre>
@@ -304,7 +304,8 @@
     Cat c1 = (Cat) a4;    // downcasting from Animal to Cat
 
     Animal a5 = new Dog();  // automatic upcasting from Dog to Animal
-    Mammal m3 = (Dog) a5;   // downcasting from Animal to Dog and then automatic upcasting to Mammal
+    Mammal m3 = (Dog) a5;   // downcasting from Animal to Dog
+                            // and then automatic upcasting to Mammal
             </pre>
             And here are some examples of downcasting which will fail and throw a ClassCastException:
             <pre>
@@ -328,18 +329,18 @@
             <pre>
     public class A {
         public void printClass() {
-            System.out.println ("Class A");
+            System.out.println("Class A");
         }
     }
 
     public class B extends A {
         public void printClass() {
-            System.out.println ("Class B");
+            System.out.println("Class B");
         }
     }
 
     public class ClassTester {
-        public static void main (String [] args) {
+        public static void main(String [] args) {
             A a = new A();
             B b = new B();
             a.printClass();
@@ -397,13 +398,13 @@
     }
 
     public class BankDemo {
-        public static void main (String [] args) {
+        public static void main(String [] args) {
             Bank rbc = new RBC();
             Bank td = new TD();
             Bank bmo = new BMO();
-            System.out.println ("RBC: " + rbc.getInterestRate() + "%");
-            System.out.println ("TD: " + td.getInterestRate() + "%");
-            System.out.println ("BMO: " + bmo.getInterestRate() + "%");
+            System.out.println("RBC: " + rbc.getInterestRate() + "%");
+            System.out.println("TD: " + td.getInterestRate() + "%");
+            System.out.println("BMO: " + bmo.getInterestRate() + "%");
         }
     }
             </pre>
@@ -440,7 +441,7 @@
 
     public class Subclass extends Superclass{
         public void foo() {
-            System.out.println ("foo");
+            System.out.println("foo");
         }
     }
             </pre>
@@ -461,18 +462,19 @@
             Here is the syntax for an interface:
             <pre>
     public interface Interface1 {
-        void foo(); // interfaces are implicitly public and abstract so the keywords are not needed
+        void foo(); // interfaces are implicitly public and
+                    // abstract so the keywords are not needed
     }
 
     public interface Interface2 extends Interface1 {
-        int foo2 ();
+        int foo2();
     }
 
     public interface Interface 3 {
-        double foo3 (int bar);
+        double foo3(int bar);
     }
 
-    public class Foo implements Interface2 implements Interface3 {
+    public class Foo implements Interface2, Interface3 {
         public void foo() {
             ...
         }
@@ -481,7 +483,7 @@
             ...
         }
 
-        public double foo3 (int bar) {
+        public double foo3(int bar) {
             ...
         }
     }
