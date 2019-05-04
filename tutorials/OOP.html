@@ -139,7 +139,7 @@
             </pre>
             <p></p>
             The main method created 5 different cars, with different brands, models, gas, and tank capacities.
-            It then executed the drive() method for each of the cards, and also executed the gasUp() method.
+            It then executed the <code>drive()</code> method for each of the cards, and also executed the <code>gasUp()</code> method.
             <h6>
                 Static and Instance Methods
             </h6>
@@ -151,7 +151,7 @@
             Instance methods are basically the regular methods that are used in a class.
             These methods can have a return type, parameters and can be set to public or private, just like any other method.
             <p></p>
-            For example, the following eatFood() method is an instance method in the Frog class:
+            For example, the following <code>eatFood()</code> method is an instance method in the Frog class:
             <pre>
     public class Frog {
         private int hungerLevel;
@@ -167,9 +167,9 @@
     }
             </pre>
             In order to use an instance method in a class, an object of that class must be created.
-            For example, to use the eatFood method in a client class, a Frog object must be created.
+            For example, to use the <code>eatFood()</code> method in a client class, a Frog object must be created.
             <p></p>
-            Here is an example of a tester class which tests the eatFood() method in the Frog class:
+            Here is an example of a tester class which tests the <code>eatFood()</code> method in the Frog class:
             <pre>
     public class FrogTester {
         public static void main(String [] args) {
@@ -178,7 +178,7 @@
         }
     }
             </pre>
-            As you can see, to use the eatFood method, a Frog object had to be created.
+            As you can see, to use the <code>eatFood()</code> method, a Frog object had to be created.
             <p></p>
             <b>Static Methods</b>
             <p></p>
@@ -196,7 +196,7 @@
         private int hungerLevel;
         private double pondTemp;
 
-        public Frog () {
+        public Frog() {
             hungerLevel = 10;
             pondTemp = 4;
         }
@@ -211,7 +211,7 @@
         }
     }
             </pre>
-            In this case, the getPondTemp() method is a static method, and a client class would not need to create an object before using it.
+            In this case, the <code>getPondTemp()</code> method is a static method, and a client class would not need to create an object before using it.
             Instead, it would use the name of the class, in the place of the object identifier.
             <p></p>
             For example, this is the tester class with the static method added:
@@ -224,7 +224,7 @@
         }
     }
             </pre>
-            In this case, the getPondTemp() method could be used without the creation of an object.
+            In this case, the <code>getPondTemp()</code> method could be used without the creation of an object.
             <h6>
                 Encapsulation
             </h6>
@@ -286,9 +286,9 @@
             </pre>
             In the above class, all of the variables are set to private, which means that they cannot be directly accessed outside of the Box class.
             This means that they are encapsulated.
-            The accessor methods, such as getLength(), getColour(), and getVolume() are public, as they need to be used in other classes in order to access the fields.
+            The accessor methods, such as <code>getLength()</code>, <code>getColour()</code>, and <code>getVolume()</code> are public, as they need to be used in other classes in order to access the fields.
             All of the accessor methods return the data type that is the same as the variable that they are trying the access.
-            The mutator methods, setDimensions() and setColour(), are also public, as they need to be used in other classes in order to change the values of the fields.
+            The mutator methods, <code>setDimensions()</code> and <code>setColour()</code>, are also public, as they need to be used in other classes in order to change the values of the fields.
             The mutator methods contain at least one parameter, which is used to change the value of one or more fields.
             They are also mostly void methods, as they do not return anything.
             <p></p>
@@ -376,7 +376,7 @@
             without any problems.
             <p></p>
             Downcasting, however, must be done manually, as not every object can be downcasted to any subclass.
-            For example, if an Animal is created by using the Animal() constructor, it cannot be downcasted to any of its subclasses since it is neither a Mammal nor a Dog nor a Cat.
+            For example, if an Animal is created by using the <code>Animal()</code> constructor, it cannot be downcasted to any of its subclasses since it is neither a Mammal nor a Dog nor a Cat.
             However, if a Dog was upcasted first to an Animal, it is able to be downcasted to a Mammal or back to a Dog.
             It cannot be downcasted to a Cat, however, as a Dog is not a Cat.
             <p></p>
@@ -404,7 +404,7 @@
             For the first failed example, a Dog is indeed an Animal.
             However, the Animal is just a Cat which has been upcasted to an Animal and is therefore not a Dog.
             For the second failed example, a Cat is indeed a Mammal.
-            However, the Mammal object had been created using the Mammal() constructor, which means that the Mammal is not a Cat.
+            However, the Mammal object had been created using the <code>Mammal()</code> constructor, which means that the Mammal is not a Cat.
             <p></p>
             <b>Overriding Methods</b>
             <p></p>
@@ -439,12 +439,12 @@
     Class A
     Class B
             </pre>
-            In the above example, class A has a method printClass() which is inherited by class B because B extends A.
-            printClass() is then overridden in B.
+            In the above example, class A has a method <code>printClass()</code> which is inherited by class B because B extends A.
+            <code>printClass()</code> is then overridden in B.
             In the tester class, one object of each class is created and the same method name is called.
             While A executes the original method, B executes the overridden one.
             <p></p>
-            One of the most commonly overridden methods is the toString() method which is from the Object class.
+            One of the most commonly overridden methods is the <code>toString()</code> method which is from the Object class.
             It is usually overridden to be able to output useful information to the user, rather than the hash value.
             <h6>
                 Polymorphism
@@ -500,7 +500,7 @@
     TD: 4.3%
     BMO: 8.2%
             </pre>
-            Although all three banks are instantiated as a Bank object, their individual getInterestRate() methods were executed when they were called.
+            Although all three banks are instantiated as a Bank object, their individual <code>getInterestRate()</code> methods were executed when they were called.
             <h6>
                 Abstraction
             </h6>
