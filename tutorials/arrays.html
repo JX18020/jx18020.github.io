@@ -118,8 +118,8 @@
     8
     3
             </pre>
-            Something which is allowed in Java which is not allowed in many programming languages are ragged arrays.
-            A ragged array is a two-dimensional array in which the number of columns in not consistent with each row.
+            Something which is allowed in Java which is not allowed in many programming languages is a ragged array.
+            A ragged array is a two-dimensional array in which the number of columns in each row are not consistent.
             <pre>
     int [][] mat = {{1, 2, 3}, {3, 2}, {4, 5, 6, 7}};
     System.out.println (mat.length);    // the number of rows in the array
@@ -148,6 +148,7 @@
             </pre>
             For example, to access the 3rd element of the above array one would need to use <code>arr[2]</code>.
             To access every element of the array, the easiest way is to use a for loop, which could loop through the indices of the array.
+            <p></p>
             Here is an example of that:
             <pre>
     int [] arr = {5, 4, 3, 2, 1};
@@ -166,6 +167,7 @@
             </pre>
             To traverse an array with two or more dimensions, one needs to use a nested for loop.
             For example, for a two-dimensional array, you would need to use one nested for loop.
+            <p></p>
             Here is an example of that:
             <pre>
     int [][] mat = {{3, 4, 5}, {2, 3, 6}, {3, 7, 9}};
@@ -232,6 +234,61 @@
                 ArrayLists
             </h6>
             An ArrayList is an object and functions similarly to arrays.
+            However, an ArrayList cannot store primitive data types such as an int, double, or char.
+            If one wants to use a primitive data type with an ArrayList, one can use their <i>wrapper classes</i>, such as the Integer class, the Double class or the Character class.
+            It extends the List interface and has a multitude of methods which are useful for manipulating the contents of the array.
+            <p></p>
+            <b>Initializing an ArrayList</b>
+            <p></p>
+            Like arrays, since an ArrayList is an object, one needs to use the <i>new</i> keyword to create one.
+            An ArrayList also has different constructors, which means one can create an ArrayList with an initial capacity or a default one with an initial capacity of 10.
+            <pre>
+    List&lt;String> str = new ArrayList&lt;String>();     // has an initial capacity of 10
+    List&lt;String> str = new ArrayList&lt;String>(7);    // sets the initial capacity to 7
+            </pre>
+            In the first ArrayList, the initial capacity of the list is automatically set to 10, while in the second, it is set to 7.
+            <p></p>
+            Also, notice how each ArrayList is declared as a List.
+            Although an ArrayList can be declared as
+            <pre>
+    ArrayList&lt;String> str = new ArrayList&lt;String>();
+            </pre>
+            it is generally preferred to use
+            <pre>
+    List&lt;String> str = new ArrayList&lt;String>();
+            </pre>
+            <b>Length of an ArrayList</b>
+            <p></p>
+            Unlike regular arrays, the capacity of an ArrayList can change.
+            The length of an ArrayList can be accessed using the size() method.
+            The size will automatically increase or decrease if one adds or removes elements.
+            When creating an ArrayList with a default constructor, its capacity will automatically be set to 10, and it can be expanded to cut to fit a certain number of elements.
+            <p></p>
+            <b>ArrayList Methods</b>
+            <p></p>
+            There are many methods which can be used with an ArrayList which make it easier for someone to manipulate the ArrayList and its contents.
+            <p></p>
+            Here are a few important ones:
+            <p></p>
+            <code>add(E e)</code> - Adds an element to the end of the ArrayList.
+            <br>
+            <code>add(int index, E element)</code> - Inserts an element into the specified index and shifts the other element down.
+            <p></p>
+            <code>clear()</code> - Clears the ArrayList.
+            <p></p>
+            <code>get(int index)</code> - Returns the element at the specified index.
+            <p></p>
+            <code>indexOf(Object o)</code> - Returns the index of the first occurrence of the specified element if it is found, if it isn't found, it returns -1.
+            <br>
+            <code>lastIndexOf(Object o)</code> - Returns the index of the last occurrence of the specified element if it founds, if it is not founds, it returns -1.
+            <p></p>
+            <code>remove(int index)</code> - Removes the element at the specified index and shifts the other elements to fill the empty spot.
+            <br>
+            <code>remove(Object o)</code> - Removes the first occurrence of the specified element and shifts the other elements to fill the empty spot.
+            <p></p>
+            <code>set(int index, E element)</code> - Replaces the element at the specified index with the given element.
+            <p></p>
+            <code>size()</code> - Returns the length of the ArrayList.
         </p2>
     </div>
 </html>

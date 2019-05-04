@@ -72,6 +72,10 @@ pre {
 	min-width: min-content;
 }
 
+code {
+	font-size: 18px;
+}
+
 ul {
   	list-style-type: none;
 	font-family: 'Source Sans Pro', sans-serif;
