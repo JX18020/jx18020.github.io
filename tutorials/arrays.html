@@ -48,17 +48,48 @@
             <pre>
     int [] arr = {1, 6, 3, 6, 0, 3, 2, 7};
             </pre>
-            Another way is to declare the array while also declaring the size of the array.
+            Another way is to declare the array while also declaring the length of the array.
             Since an array is an object, the keyword <i>new</i> must be used to declare the array.
-            The following array would have a size of 56.
+            The following array would have a length of 56.
             <pre>
     int [] arr = new int [56];
             </pre>
-            The square brackets ([]) can be before or after the array name.
-            If it after the array name, it is called <i>C-Style</i>, named after the programming language <i>C</i>.
-            Although it is allowed, c-style is often discouraged and considered bad programming style in java and putting the square brackets after the data type is preferred.
+            The square brackets (<code>[]</code>) can be before or after the array name.
+            If it is after the array name, it is called <i>C-Style</i>, named after the programming language <i>C</i>.
+            Although it is allowed, c-style is often discouraged and considered bad programming style in Java.
+            Putting the square brackets after the data type is preferred.
             <p></p>
-            <b></b>
+            <h6>
+                Two-Dimensional Arrays
+            </h6>
+            A two-dimensional array is a way to store many values, like in a one-dimensional array, but it can be stored as a matrix.
+            In other words, the values are stored like a table or coordinate grid.
+            Essentially, a two dimensional array is like an array inside of an array.
+            The two dimensions of the array are represented by a row and a column and each value is stored under each cell.
+            <p></p>
+            <b>Initializing a Two-Dimensional Array</b>
+            <p></p>
+            A two-dimensional array is initialized in a very similar way to one-dimensional arrays.
+            Like one-dimensional arrays, a two dimensional array can be created in two ways.
+            It can be created by directly initializing the values in the array.
+            The following array would have 3 rows and 4 columns.
+            <pre>
+    int [][] arr = {{1, 2, 3, 4}, {4, 3, 2, 1}, {2, 3, 4, 1}};
+            </pre>
+            The second way is to declare the length of both the row and column.
+            Again, since an array is an object, the <i>new</i> keyword must be used.
+            The following array would have 8 rows and 14 columns.
+            <pre>
+    int [][] arr = new int [8][14];
+            </pre>
+            <h6>
+                Multi-Dimensional Arrays
+            </h6>
+            A multi-dimensional array is just an array which has more than two dimensions.
+            The initialization process of a multi-dimensional array is the same as with one or two dimensions, just with as many square brackets as there are dimensions.
+            <h6>
+                
+            </h6>
         </p2>
     </div>
 </html>

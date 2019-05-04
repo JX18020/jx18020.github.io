@@ -141,6 +141,87 @@
             The main method created 5 different cars, with different brands, models, gas, and tank capacities.
             It then executed the drive() method for each of the cards, and also executed the gasUp() method.
             <h6>
+                Static and Instance Methods
+            </h6>
+            A method in a class represents a behaviour that the class possesses.
+            There are two main types of methods, <i>static methods</i> and <i>instance methods</i>.
+            <p></p>
+            <b>Instance Methods</b>
+            <p></p>
+            Instance methods are basically the regular methods that are used in a class.
+            These methods can have a return type, parameters and can be set to public or private, just like any other method.
+            For example, the following eatFood() method is an instance method in the Frog class:
+            <pre>
+    public class Frog {
+        private int hungerLevel;
+
+        public Frog() {
+            hungerLevel = 10;
+        }
+
+        public void eatFood(String food) {
+            if (food.equals("fly"))
+                hungerLevel--;
+        }
+    }
+            </pre>
+            In order to use an instance method in a class, an object of that class must be created.
+            For example, to use the eatFood method in a client class, a Frog object must be created.
+            Here is an example of a tester class which tests the eatFood() method in the Frog class.
+            <pre>
+    public class FrogTester {
+        public static void main(String [] args) {
+            Frog f1 = new Frog();
+            f1.eatFood();
+        }
+    }
+            </pre>
+            As you can see, to use the eatFood method, a Frog object had to be created.
+            <p></p>
+            <b>Static Methods</b>
+            <p></p>
+            Static methods are like instance methods, however, they can be used without creating an object of the class.
+            To create a static method, one needs to use the <i>static</i> keyword:
+            <pre>
+    public static void methodName() {
+        ...
+    }
+            </pre>
+            For example, the Frog class may have a method which returns the temperature of the pond:
+            <pre>
+    public class Frog {
+        private int hungerLevel;
+        private double pondTemp;
+
+        public Frog () {
+            hungerLevel = 10;
+            pondTemp = 4;
+        }
+
+        public void eatFood(String food) {
+            if (food.equals("fly"))
+                hungerLevel--;
+        }
+
+        public static double getPondTemp() {
+            return pondTemp;
+        }
+    }
+            </pre>
+            In this case, the getPondTemp() method is a static method, and a client class would not need to create an object before using it.
+            Instead, it would use the name of the class, in the place of the object identifier.
+            For example, this is the tester class with the static method added:
+            <pre>
+    public class FrogTester {
+        public static void main(String [] args) {
+            Frog.getPondTemp();
+            Frog f1 = new Frog();
+            f1.eatFood();
+        }
+    }
+            </pre>
+            In this case, the getPondTemp() method could be used without the creation of an object.
+            <h6>
                 Encapsulation
             </h6>
             Notice the terms <i>public</i> and <i>private</i> in the sections of code above for the Car class.
