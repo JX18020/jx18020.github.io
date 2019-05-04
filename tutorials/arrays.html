@@ -80,7 +80,7 @@
             Again, since an array is an object, the <i>new</i> keyword must be used.
             The following array would have 8 rows and 14 columns.
             <pre>
-    int [][] arr = new int [8][14];
+    int [][] mat = new int [8][14];
             </pre>
             <h6>
                 Multi-Dimensional Arrays
@@ -109,9 +109,9 @@
             However, to access the number of columns in a two-dimensional array, you have to specify the row first.
             Here is an example of that.
             <pre>
-    int [] arr = new int [8][3];
-    System.out.println(arr.length);     // the number of rows in the array
-    System.out.println(arr[0].length);  // the number of columns in the array
+    int [][] mat = new int [8][3];
+    System.out.println(mat.length);     // the number of rows in the array
+    System.out.println(mat[0].length);  // the number of columns in the array
             </pre>
             Output:
             <pre>
@@ -121,11 +121,11 @@
             Something which is allowed in Java which is not allowed in many programming languages are ragged arrays.
             A ragged array is a two-dimensional array in which the number of columns in not consistent with each row.
             <pre>
-    int [][] arr = {{1, 2, 3}, {3, 2}, {4, 5, 6, 7}};
-    System.out.println (arr.length);    // the number of rows in the array
-    System.out.println (arr[0].length); // the number of columns in the first row
-    System.out.println (arr[1].length); // the number of columns in the second row
-    System.out.println (arr[2].length); // the number of columns in the third row
+    int [][] mat = {{1, 2, 3}, {3, 2}, {4, 5, 6, 7}};
+    System.out.println (mat.length);    // the number of rows in the array
+    System.out.println (mat[0].length); // the number of columns in the first row
+    System.out.println (mat[1].length); // the number of columns in the second row
+    System.out.println (mat[2].length); // the number of columns in the third row
             </pre>
             Output:
             <pre>
@@ -144,26 +144,94 @@
             So, if one were to try to access the element at index 5 in an array which has a length of 5, it would throw an ArrayIndexOutOfBoundsException.
             To access one specific element of an array, one can use use square brackets, while specifying the index of the element.
             <pre>
-        int [] arr = {1, 2, 3, 4, 5};
+    int [] arr = {1, 2, 3, 4, 5};
             </pre>
             For example, to access the 3rd element of the above array one would need to use <code>arr[2]</code>.
             To access every element of the array, the easiest way is to use a for loop, which could loop through the indices of the array.
             Here is an example of that:
             <pre>
-        int [] arr = {5, 4, 3, 2, 1};
+    int [] arr = {5, 4, 3, 2, 1};
 
-        for (int i = 0 ; i < arr.length ; i++) {
-            System.out.println (arr[i]);
-        }
+    for (int i = 0 ; i < arr.length ; i++) {
+        System.out.println (arr[i]);
+    }
             </pre>
             Output:
             <pre>
-        5
-        4
-        3
-        2
-        1
+    5
+    4
+    3
+    2
+    1
             </pre>
+            To traverse an array with two or more dimensions, one needs to use a nested for loop.
+            For example, for a two-dimensional array, you would need to use one nested for loop.
+            Here is an example of that:
+            <pre>
+    int [][] mat = {{3, 4, 5}, {2, 3, 6}, {3, 7, 9}};
+    for (int i = 0 ; i < mat.length ; i++) {
+        for (int j = 0 ; j < mat[0].length ; j++) {
+            System.out.print (mat[i][j] + " ");
+        }
+        System.out.println ();
+    }
+            </pre>
+            Output:
+            <pre>
+    3 4 5
+    2 3 6
+    3 7 9
+            </pre>
+            The first loop in the above code accesses the index of the row of the array.
+            The second loop accesses the index of the column.
+            Used together, the for loops access each element of the array.
+            <h6>
+                Using Arrays as Parameters
+            </h6>
+            Normally, when a value is used as a parameter in a method, it is <i>passed by reference</i>.
+            What this means is that a reference to the variable is passed, and whatever is done to that variable in the method does not affect the original variable.
+            However, when using an array as a parameter in a method, it is <i>passed by value</i>.
+            Instead of passing a reference of that array, the array itself is passed, and whatever is done to the array in the method affects the original array.
+            Here is an example of the difference between passing by reference and passing by value.
+            <pre>
+    public class PassingTest {
+        private int intValue = 4;
+        private int [] arrValues = {1, 2, 3, 4};
+
+        public void changeInt(int passedInt) {
+            passedInt++;
+        }
+
+        public void changeArr(int [] passedArr) {
+            for (int i = 0 ; i < passedArr.length ; i++) {
+                passedArr[i]++;
+            }
+        }
+
+        public static void main (String [] args) {
+            PassingTest pt = new PassingTest();
+            pt.changeInt(pt.intValue);
+            pt.changeArr(pt.arrValues);
+            System.out.println (pt.intValue);
+            System.out.println ();
+            for (int i = 0 ; i < pt.arrValues.length ; i++) {
+                System.out.print (pt.arrValues[i] + " ");
+            }
+        }
+    }
+            </pre>
+            Output:
+            <pre>
+    4
+
+    2 3 4 5
+            </pre>
+            As one can see, the int value in the class remained unchanged, but the int values in the array all increased.
+            This is due to the fact that the int value is passed by reference but the array is passed by value.
+            <h6>
+                ArrayLists
+            </h6>
+            An ArrayList is an object and functions similarly to arrays.
         </p2>
     </div>
 </html>
