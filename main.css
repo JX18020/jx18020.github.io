@@ -255,3 +255,26 @@ l a:visited {
 l a:hover {
   	color: 828282;
 }
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	text-align: left;
+	padding: 8px;
+	font-size: 18px;
+	border: 1px solid #eeeeee;
+}
+
+th {
+	text-align: left;
+	padding: 8px;
+	font-size: 20px;
+	border: 1px solid #eeeeee;
+}
+
+tr:nth-child(even) {
+	background-color: #eeeeee;
+}

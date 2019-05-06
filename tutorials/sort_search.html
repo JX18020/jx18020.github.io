@@ -218,9 +218,9 @@
                 First, the 0 is swapped with the 6, then the 1 is swapped with the 3, then the 2 is swapped with the 7, and so on.
                 This process repeats until the maximum value is left in the unsorted portion, at which point the entire array is sorted.
             </p>
-            <h5>
+            <h4>
                 Efficiency and Big O Notation
-            </h5>
+            </h4>
             <p>
                 Not all sorting algorithms are made the same.
                 Some algorithms are faster with a smaller number of elements, and some are faster with a larger number of elements.
@@ -235,6 +235,80 @@
                 However, as there are more and more elements, an algorithm with a time complexity of O(n^2) would be much slower than one with a time complexity of O(n).
                 For example, when sorting an array with 21 elements, an algorithm with a time complexity of O(n) would have to make 21 operations, while an algorithm with a time complexity of O(n^2) would have to do 441 operations.
             </p>
+            <h5>
+                Best Case, Worst Case, and Average Case
+            </h5>
+            <p>
+                Every sorting algorithm has a best case time complexity, a worst case time complexity, and an average case time complexity.
+                For example, selection sort's best case, worst case, and average are all O(n^2).
+                This means that selection sort is considered a very slow sorting algorithm.
+                The reason that all of selection sort's cases are the same time complexity is because even if it is given an already sorted array, it still has to compare all of its elements.
+            </p>
+            <p>
+                From fastest to slowest, here are the time complexities in big O notation:
+            </p>
+            <p>
+                O(1) - constant
+                <br>
+                O(log n) - logarithmic
+                <br>
+                O(n) - linear
+                <br>
+                O(n log n) - linearithmic
+                <br>
+                O(n^2) - quadratic
+                <br>
+                O(2^n) - exponential
+                <br>
+                O(n!) - factorial
+            </p>
+            <p>
+                Here are the best case, worst case, and average case time complexities for the most popular sorting algorithms:
+            </p>
+            <table>
+                <tr>
+                    <th>Sorting Algorithm</th>
+                    <th>Best Case</th>
+                    <th>Worst Case</th>
+                    <th>Average Case</th>
+                </tr>
+                <tr>
+                    <td>Selection Sort</td>
+                    <td>O(n^2)</td>
+                    <td>O(n^2)</td>
+                    <td>O(n^2)</td>
+                </tr>
+                <tr>
+                    <td>Bubble Sort</td>
+                    <td>O(n)</td>
+                    <td>O(n^2)</td>
+                    <td>O(n^2)</td>
+                </tr>
+                <tr>
+                    <td>Insertion Sort</td>
+                    <td>O(n)</td>
+                    <td>O(n^2)</td>
+                    <td>O(n^2)</td>
+                </tr>
+                <tr>
+                    <td>Heap Sort</td>
+                    <td>O(n log n)</td>
+                    <td>O(n log n)</td>
+                    <td>O(n log n)</td>
+                </tr>
+                <tr>
+                    <td>Quick Sort</td>
+                    <td>O(n log n)</td>
+                    <td>O(n^2)</td>
+                    <td>O(n log n)</td>
+                </tr>
+                <tr>
+                    <td>Merge Sort</td>
+                    <td>O(n log n)</td>
+                    <td>O(n log n)</td>
+                    <td>O(n log n)</td>
+                </tr>
+            </table>
         </p2>
     </div>
 </html>
