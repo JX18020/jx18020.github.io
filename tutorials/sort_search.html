@@ -71,7 +71,7 @@
                 Let's take that step by step:
             </p>
             <p>
-                First, lets create the unsorted array.
+                First, let's create the unsorted array.
                 This array can be randomly generated or from user input, but for the sake of simplicity, let's create it ourselves:
             </p>
             <pre>
@@ -89,7 +89,7 @@
             <p>
                 This for loop runs from the first index of the array (i.e. 0) to the second to last index of the array (i.e. arr.length - 1).
                 This loop denotes how much of the array is sorted, as the index keeps moving up every time.
-                The reason it runs until second to last index instead of the very last index is because it needs to compare the elements in unsorted portion of the array, which are the elements from index <code>i</code> and the elements after it.
+                The reason it runs until second to last index instead of the very last index is that it needs to compare the elements in the unsorted portion of the array, which are the elements from index <code>i</code> and the elements after it.
                 It is not necessary to run until the last index because it would only be comparing one element against itself, which means the array would already be sorted at that point.
             </p>
             <p>
@@ -309,6 +309,12 @@
                     <td>O(n log n)</td>
                 </tr>
             </table>
+            <h4>
+                Searching
+            </h4>
+            <p>
+                To search for an element in an array, one needs to use a sorting algorithm.
+            </p>
         </p2>
     </div>
 </html>
