@@ -30,84 +30,109 @@
     <h3>Arrays/ArrayLists</h3>
     <div class="tutorials">
         <p2>
-            Arrays and array lists are a way to store many values of the same data type.
-            For example, it can store 1000 emails for a newspaper website, 30 student marks for a class, or 10 different models of cars.
-            Each value in an array is called an element, and each position of each element is called an index.
-            <h6>
+            <p>
+                Arrays and array lists are a way to store many values of the same data type.
+                For example, it can store 1000 emails for a newspaper website, 30 student marks for a class, or 10 different models of cars.
+                Each value in an array is called an element, and each position of each element is called an index.
+            </p>
+            <h4>
                 One-Dimensional Arrays
-            </h6>
-            A one-dimensional array is an array which is linear.
-            It only requires one index to specify any element of the array.
-            <p></p>
-            <b>Initializing a One-Dimensional Array</b>
-            <p></p>
-            There are two main ways to initialize an array.
-            The first way is to declare the array and initialize each element at the same time.
-            The length of the array is also set at the same time when it initialized this way.
-            For example, the following array would have a length of 8.
+            </h4>
+            <p>
+                A one-dimensional array is an array which is linear.
+                It only requires one index to specify any element of the array.
+            </p>
+            <h5>
+                Initializing a One-Dimensional Array
+            </h5>
+            <p>
+                There are two main ways to initialize an array.
+                The first way is to declare the array and initialize each element at the same time.
+                The length of the array is also set at the same time when it initialized this way.
+                For example, the following array would have a length of 8.
+            </p>
             <pre>
     int [] arr = {1, 6, 3, 6, 0, 3, 2, 7};
             </pre>
-            Another way is to declare the array while also declaring the length of the array.
-            Since an array is an object, the keyword <i>new</i> must be used to declare the array.
-            The following array would have a length of 56.
+            <p>
+                Another way is to declare the array while also declaring the length of the array.
+                Since an array is an object, the keyword <i>new</i> must be used to declare the array.
+                The following array would have a length of 56.
+            </p>
             <pre>
     int [] arr = new int [56];
             </pre>
-            The square brackets (<code>[]</code>) can be before or after the array name.
-            If it is after the array name, it is called <i>C-Style</i>, named after the programming language <i>C</i>.
-            Although it is allowed, c-style is often discouraged and considered bad programming style in Java.
-            Putting the square brackets after the data type is preferred.
-            <p></p>
-            <h6>
+            <p>
+                The square brackets (<code>[]</code>) can be before or after the array name.
+                If it is after the array name, it is called <i>C-Style</i>, named after the programming language <i>C</i>.
+                Although it is allowed, c-style is often discouraged and considered bad programming style in Java.
+                Putting the square brackets after the data type is preferred.
+            </p>
+            <h4>
                 Two-Dimensional Arrays
-            </h6>
-            A two-dimensional array is a way to store many values, like in a one-dimensional array, but it can be stored as a matrix.
-            In other words, the values are stored like a table or coordinate grid.
-            Essentially, a two dimensional array is like an array inside of an array.
-            The two dimensions of the array are represented by a row and a column and each value is stored under each cell.
-            <p></p>
-            <b>Initializing a Two-Dimensional Array</b>
-            <p></p>
-            A two-dimensional array is initialized in a very similar way to one-dimensional arrays.
-            Like one-dimensional arrays, a two dimensional array can be created in two ways.
-            It can be created by directly initializing the values in the array.
-            The following array would have 3 rows and 4 columns.
+            </h4>
+            <p>
+                A two-dimensional array is a way to store many values, like in a one-dimensional array, but it can be stored as a matrix.
+                In other words, the values are stored like a table or coordinate grid.
+                Essentially, a two dimensional array is like an array inside of an array.
+                The two dimensions of the array are represented by a row and a column and each value is stored under each cell.
+            </p>
+            <h5>
+                Initializing a Two-Dimensional Array
+            </h5>
+            <p>
+                A two-dimensional array is initialized in a very similar way to one-dimensional arrays.
+                Like one-dimensional arrays, a two dimensional array can be created in two ways.
+                It can be created by directly initializing the values in the array.
+                The following array would have 3 rows and 4 columns.
+            </p>
             <pre>
     int [][] arr = {{1, 2, 3, 4}, {4, 3, 2, 1}, {2, 3, 4, 1}};
             </pre>
-            The second way is to declare the length of both the row and column.
-            Again, since an array is an object, the <i>new</i> keyword must be used.
-            The following array would have 8 rows and 14 columns.
+            <p>
+                The second way is to declare the length of both the row and column.
+                Again, since an array is an object, the <i>new</i> keyword must be used.
+                The following array would have 8 rows and 14 columns.
+            </p>
             <pre>
     int [][] mat = new int [8][14];
             </pre>
-            <h6>
+            <h4>
                 Multi-Dimensional Arrays
-            </h6>
-            A multi-dimensional array is just an array which has more than two dimensions.
-            The initialization process of a multi-dimensional array is the same as with one or two dimensions, just with as many square brackets as there are dimensions.
-            <h6>
+            </h4>
+            <p>
+                A multi-dimensional array is just an array which has more than two dimensions.
+                The initialization process of a multi-dimensional array is the same as with one or two dimensions, just with as many square brackets as there are dimensions.
+            </p>
+            <h4>
                 Length of Arrays
-            </h6>
-            In Java, the length of an array is stored in a final variable, compared to the method for the String class.
-            That means, to access the length of an array, one needs to use .length.
+            </h4>
+            <p>
+                In Java, the length of an array is stored in a final variable, compared to the method for the String class.
+                That means, to access the length of an array, one needs to use <code>.length</code>.
+            </p>
             <pre>
     int [] arr = new int [10];
     System.out.println(arr.length);
             </pre>
-            Output:
+            <p>
+                Output:
+            </p>
             <pre>
     10
             </pre>
-            However, since it is stored in a final variable (a constant), the length of an array cannot be changed once it is initialized.
-            The only way to change the length of an array is to create temporary array, transfer the contents of the original array into the temporary array, create an new array with the wanted size, and transfer the contents back into the original array.
-            <p></p>
-            <b>Length of Two-Dimensional Arrays</b>
-            <p></p>
-            To access the number of rows in a two-dimensional array, one can use .length like as one would for a one-dimensional array.
-            However, to access the number of columns in a two-dimensional array, you have to specify the row first.
-            Here is an example of that.
+            <p>
+                However, since it is stored in a final variable (a constant), the length of an array cannot be changed once it is initialized.
+                The only way to change the length of an array is to create temporary array, transfer the contents of the original array into the temporary array, create an new array with the wanted size, and transfer the contents back into the original array.
+            </p>
+            <h5>
+                Length of Two-Dimensional Arrays
+            </h5>
+            <p>
+                To access the number of rows in a two-dimensional array, one can use .length like as one would for a one-dimensional array.
+                However, to access the number of columns in a two-dimensional array, you have to specify the row first.
+                Here is an example of that.
+            </p>
             <pre>
     int [][] mat = new int [8][3];
     System.out.println(mat.length);     // the number of rows in the array
@@ -118,8 +143,10 @@
     8
     3
             </pre>
-            Something which is allowed in Java which is not allowed in many programming languages is a ragged array.
-            A ragged array is a two-dimensional array in which the number of columns in each row are not consistent.
+            <p>
+                Something which is allowed in Java which is not allowed in many programming languages is a ragged array.
+                A ragged array is a two-dimensional array in which the number of columns in each row are not consistent.
+            </p>
             <pre>
     int [][] mat = {{1, 2, 3}, {3, 2}, {4, 5, 6, 7}};
     System.out.println (mat.length);    // the number of rows in the array
@@ -134,22 +161,28 @@
     2
     4
             </pre>
-            The number of rows in the above array is 3.
-            The number of columns in the array are different, with the first having 3 columns, the second having 2, and the third having 4.
-
-            <h6>
+            <p>
+                The number of rows in the above array is 3.
+                The number of columns in the array are different, with the first having 3 columns, the second having 2, and the third having 4.
+            </p>
+            <h4>
                 Traversing an Array
-            </h6>
-            The indices of an array of length N would range from 0 to N-1.
-            So, if one were to try to access the element at index 5 in an array which has a length of 5, it would throw an ArrayIndexOutOfBoundsException.
-            To access one specific element of an array, one can use use square brackets, while specifying the index of the element.
+            </h4>
+            <p>
+                The indices of an array of length N would range from 0 to N-1.
+                So, if one were to try to access the element at index 5 in an array which has a length of 5, it would throw an <code>ArrayIndexOutOfBoundsException</code>.
+                To access one specific element of an array, one can use use square brackets, while specifying the index of the element.
+            </p>
             <pre>
     int [] arr = {1, 2, 3, 4, 5};
             </pre>
-            For example, to access the 3rd element of the above array one would need to use <code>arr[2]</code>.
-            To access every element of the array, the easiest way is to use a for loop, which could loop through the indices of the array.
-            <p></p>
+            <p>
+                For example, to access the 3rd element of the above array one would need to use <code>arr[2]</code>.
+                To access every element of the array, the easiest way is to use a for loop, which could loop through the indices of the array.
+            </p>
+            <p>
             Here is an example of that:
+            </p>
             <pre>
     int [] arr = {5, 4, 3, 2, 1};
 
@@ -157,7 +190,9 @@
         System.out.println (arr[i]);
     }
             </pre>
-            Output:
+            <p>
+                Output:
+            </p>
             <pre>
     5
     4
@@ -165,10 +200,13 @@
     2
     1
             </pre>
-            To traverse an array with two or more dimensions, one needs to use a nested for loop.
-            For example, for a two-dimensional array, you would need to use one nested for loop.
-            <p></p>
-            Here is an example of that:
+            <p>
+                To traverse an array with two or more dimensions, one needs to use a nested for loop.
+                For example, for a two-dimensional array, you would need to use one nested for loop.
+            </p>
+            <p>
+                Here is an example of that:
+            </p>
             <pre>
     int [][] mat = {{3, 4, 5}, {2, 3, 6}, {3, 7, 9}};
     for (int i = 0 ; i < mat.length ; i++) {
@@ -178,23 +216,29 @@
         System.out.println();
     }
             </pre>
-            Output:
+            <p>
+                Output:
+            </p>
             <pre>
     3 4 5
     2 3 6
     3 7 9
             </pre>
-            The first loop in the above code accesses the index of the row of the array.
-            The second loop accesses the index of the column.
-            Used together, the for loops access each element of the array.
-            <h6>
+            <p>
+                The first loop in the above code accesses the index of the row of the array.
+                The second loop accesses the index of the column.
+                Used together, the for loops access each element of the array.
+            </p>
+            <h4>
                 Using Arrays as Parameters
-            </h6>
-            Normally, when a value is used as a parameter in a method, it is <i>passed by reference</i>.
-            What this means is that a reference to the variable is passed, and whatever is done to that variable in the method does not affect the original variable.
-            However, when using an array as a parameter in a method, it is <i>passed by value</i>.
-            Instead of passing a reference of that array, the array itself is passed, and whatever is done to the array in the method affects the original array.
-            Here is an example of the difference between passing by reference and passing by value.
+            </h4>
+            <p>
+                Normally, when a value is used as a parameter in a method, it is <i>passed by reference</i>.
+                What this means is that a reference to the variable is passed, and whatever is done to that variable in the method does not affect the original variable.
+                However, when using an array as a parameter in a method, it is <i>passed by value</i>.
+                Instead of passing a reference of that array, the array itself is passed, and whatever is done to the array in the method affects the original array.
+                Here is an example of the difference between passing by reference and passing by value.
+            </p>
             <pre>
     public class PassingTest {
         private int intValue = 4;
@@ -222,73 +266,99 @@
         }
     }
             </pre>
-            Output:
+            <p>
+                Output:
+            </p>
             <pre>
     4
 
     2 3 4 5
             </pre>
-            As one can see, the int value in the class remained unchanged, but the int values in the array all increased.
-            This is due to the fact that the int value is passed by reference but the array is passed by value.
-            <h6>
+            <p>
+                As one can see, the int value in the class remained unchanged, but the int values in the array all increased.
+                This is due to the fact that the int value is passed by reference but the array is passed by value.
+            </p>
+            <h4>
                 ArrayLists
-            </h6>
-            An ArrayList is an object and functions similarly to arrays.
-            However, an ArrayList cannot store primitive data types such as an int, double, or char.
-            If one wants to use a primitive data type with an ArrayList, one can use their <i>wrapper classes</i>, such as the Integer class, the Double class or the Character class.
-            It extends the List interface and has a multitude of methods which are useful for manipulating the contents of the array.
-            <p></p>
-            <b>Initializing an ArrayList</b>
-            <p></p>
-            Like arrays, since an ArrayList is an object, one needs to use the <i>new</i> keyword to create one.
-            An ArrayList also has different constructors, which means one can create an ArrayList with an initial capacity or a default one with an initial capacity of 10.
+            </h4>
+            <p>
+                An ArrayList is an object and functions similarly to arrays.
+                However, an ArrayList cannot store primitive data types such as an int, double, or char.
+                If one wants to use a primitive data type with an ArrayList, one can use their <i>wrapper classes</i>, such as the Integer class, the Double class or the Character class.
+                It extends the List interface and has a multitude of methods which are useful for manipulating the contents of the array.
+            </p>
+            <h5>
+                Initializing an ArrayList
+            </h5>
+            <p>
+                Like arrays, since an ArrayList is an object, one needs to use the <i>new</i> keyword to create one.
+                An ArrayList also has different constructors, which means one can create an ArrayList with an initial capacity or a default one with an initial capacity of 10.
+            </p>
             <pre>
     List&lt;String> str = new ArrayList&lt;String>();     // has an initial capacity of 10
     List&lt;String> str = new ArrayList&lt;String>(7);    // sets the initial capacity to 7
             </pre>
-            In the first ArrayList, the initial capacity of the list is automatically set to 10, while in the second, it is set to 7.
-            <p></p>
-            Also, notice how each ArrayList is declared as a List.
-            Although an ArrayList can be declared as
+            <p>
+                In the first ArrayList, the initial capacity of the list is automatically set to 10, while in the second, it is set to 7.
+            </p>
+            <p>
+                Also, notice how each ArrayList is declared as a List.
+                Although an ArrayList can be declared as
+            </p>
             <pre>
     ArrayList&lt;String> str = new ArrayList&lt;String>();
             </pre>
-            it is generally preferred to use
+            <p>
+                it is generally preferred to use
+            </p>
             <pre>
     List&lt;String> str = new ArrayList&lt;String>();
             </pre>
-            <b>Length of an ArrayList</b>
-            <p></p>
-            Unlike regular arrays, the capacity of an ArrayList can change.
-            The length of an ArrayList can be accessed using the size() method.
-            The size will automatically increase or decrease if one adds or removes elements.
-            When creating an ArrayList with a default constructor, its capacity will automatically be set to 10, and it can be expanded to cut to fit a certain number of elements.
-            <p></p>
-            <b>ArrayList Methods</b>
-            <p></p>
-            There are many methods which can be used with an ArrayList which make it easier for someone to manipulate the ArrayList and its contents.
-            <p></p>
-            Here are a few important ones:
-            <p></p>
-            <code>add(E e)</code> - Adds an element to the end of the ArrayList.
-            <br>
-            <code>add(int index, E element)</code> - Inserts an element into the specified index and shifts the other element down.
-            <p></p>
-            <code>clear()</code> - Clears the ArrayList.
-            <p></p>
-            <code>get(int index)</code> - Returns the element at the specified index.
-            <p></p>
-            <code>indexOf(Object o)</code> - Returns the index of the first occurrence of the specified element if it is found, if it isn't found, it returns -1.
-            <br>
-            <code>lastIndexOf(Object o)</code> - Returns the index of the last occurrence of the specified element if it founds, if it is not founds, it returns -1.
-            <p></p>
-            <code>remove(int index)</code> - Removes the element at the specified index and shifts the other elements to fill the empty spot.
-            <br>
-            <code>remove(Object o)</code> - Removes the first occurrence of the specified element and shifts the other elements to fill the empty spot.
-            <p></p>
-            <code>set(int index, E element)</code> - Replaces the element at the specified index with the given element.
-            <p></p>
-            <code>size()</code> - Returns the length of the ArrayList.
+            <h5>
+                Length of an ArrayList
+            </h5>
+            <p>
+                Unlike regular arrays, the capacity of an ArrayList can change.
+                The length of an ArrayList can be accessed using the size() method.
+                The size will automatically increase or decrease if one adds or removes elements.
+                When creating an ArrayList with a default constructor, its capacity will automatically be set to 10, and it can be expanded to cut to fit a certain number of elements.
+            </p>
+            <h5>
+                ArrayList Methods
+            </h5>
+            <p>
+                There are many methods which can be used with an ArrayList which make it easier for someone to manipulate the ArrayList and its contents.
+            </p>
+            <p>
+                Here are a few important ones:
+            </p>
+            <p>
+                <code>add(E e)</code> - Adds an element to the end of the ArrayList.
+                <br>
+                <code>add(int index, E element)</code> - Inserts an element into the specified index and shifts the other element down.
+            </p>
+            <p>
+                <code>clear()</code> - Clears the ArrayList.
+            </p>
+            <p>
+                <code>get(int index)</code> - Returns the element at the specified index.
+            </p>
+            <p>
+                <code>indexOf(Object o)</code> - Returns the index of the first occurrence of the specified element if it is found, if it isn't found, it returns -1.
+                <br>
+                <code>lastIndexOf(Object o)</code> - Returns the index of the last occurrence of the specified element if it founds, if it is not founds, it returns -1.
+            </p>
+            <p>
+                <code>remove(int index)</code> - Removes the element at the specified index and shifts the other elements to fill the empty spot.
+                <br>
+                <code>remove(Object o)</code> - Removes the first occurrence of the specified element and shifts the other elements to fill the empty spot.
+            </p>
+            <p>
+                <code>set(int index, E element)</code> - Replaces the element at the specified index with the given element.
+            </p>
+            <p>
+                <code>size()</code> - Returns the length of the ArrayList.
+            </p>
         </p2>
     </div>
 </html>

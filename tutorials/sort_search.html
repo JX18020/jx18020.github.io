@@ -23,4 +23,218 @@
     <br>
     <h2>Tutorials</h2>
     <h3>Sort/Search</h3>
+    <div class="tutorials">
+        <p2>
+            <p>
+                The following tutorial deals with the manipulation of arrays or ArrayLists.
+                <br>
+                To learn more about arrays, click <l><a href="arrays.html">here</a></l>.
+            </p>
+            <p>
+                Sorting and searching are the main ways to manipulate an array to make it easier to work with.
+                There are many ways to both search and sort, each of them slightly different in their efficiency.
+            </p>
+            <h4>
+                Sorting
+            </h4>
+            <p>
+                An array of elements can be sorted in ascending or descending order, depending on how it is needed.
+                For the most part, numerical data and primitive data types are sorted the most frequently.
+                Objects are able to be sorted, however, it may not work as intended all the time.
+            </p>
+            <p>
+                There are many different sorts that can be used to sort an array.
+                These include bubble sort, insertion sort, merge sort, and many more.
+            </p>
+            <p>
+                <i>Bubble sorting</i> is essentially looping through the array of elements and seeing if each element is greater (or less than depending on what order is desired) than the one in front of it.
+                If so, then the two elements are swapped and this process is repeated until the entire array is sorted.
+            </p>
+            <p>
+                <i>Insertion sorting</i> is when an array is looped through and every element is inserted into the correct spot in the array.
+            </p>
+            <p>
+                <i>Merge sorting</i> is splitting the array into many different sorted arrays (i.e. arrays with one element) and then merging them all to form one sorted array.
+            </p>
+            <p>
+                This tutorial will go in depth about a sorting algorithm called <i>selection sort</i>, which is quite similar to insertion sort.
+            </p>
+            <h5>
+                Selection Sort
+            </h5>
+            <p>
+                Selection sort is one of the sorting algorithms which are pretty easy to implement, along with bubble sort and insertion sort.
+                In a nutshell, what happens during selection sort is that the array of elements is looped through, and the smallest (or greatest) element is found.
+                Then, that element is swapped with the first element of the unsorted portion of the array, and this process continues until the entire array is sorted.
+            </p>
+            <p>
+                Let's take that step by step:
+            </p>
+            <p>
+                First, lets create the unsorted array.
+                This array can be randomly generated or from user input, but for the sake of simplicity, let's create it ourselves:
+            </p>
+            <pre>
+    <b>int arr [] = {6, 3, 7, 4, 1, 2, 0, 8, 9, 5};</b>
+            </pre>
+            <p>
+                Next, we need a for loop:
+            </p>
+            <pre>
+    int arr [] = {6, 3, 7, 4, 1, 2, 0, 8, 9, 5};
+    <b>for (int i = 0 ; i < arr.length - 1 ; i++) {
+        ...
+    }</b>
+            </pre>
+            <p>
+                This for loop runs from the first index of the array (i.e. 0) to the second to last index of the array (i.e. arr.length - 1).
+                This loop denotes how much of the array is sorted, as the index keeps moving up every time.
+                The reason it runs until second to last index instead of the very last index is because it needs to compare the elements in unsorted portion of the array, which are the elements from index <code>i</code> and the elements after it.
+                It is not necessary to run until the last index because it would only be comparing one element against itself, which means the array would already be sorted at that point.
+            </p>
+            <p>
+                Now, we need a variable which will hold the index of the element which has the minimum value (or maximum value if sorting in descending order):
+            </p>
+            <pre>
+    int arr [] = {6, 3, 7, 4, 1, 2, 0, 8, 9, 5};
+    for (int i = 0 ; i < arr.length - 1 ; i++) {
+        <b>int min = i;</b>
+        ...
+    }
+            </pre>
+            <p>
+                The reason it is set to variable <code>i</code> is because that is the index of the start of the unsorted portion of the array.
+            </p>
+            <p>
+                Next, we need another for loop, which runs inside the other for loop:
+            </p>
+            <pre>
+    int arr [] = {6, 3, 7, 4, 1, 2, 0, 8, 9, 5};
+    for (int i = 0 ; i < arr.length - 1 ; i++) {
+        int min = i;
+        <b>for (int j = i + 1 ; j < arr.length ; j++) {
+            ...
+        }</b>
+        ...
+    }
+            </pre>
+            <p>
+                This for loop runs through the unsorted portion of the array, not including the very first element.
+                The very first element is not needed because its index is already held in the <code>min</code> variable.
+            </p>
+            <p>
+                Next up is the if statement which compares the element at index <code>j</code> to the minimum value at index <code>min</code>:
+            </p>
+            <pre>
+    int arr [] = {6, 3, 7, 4, 1, 2, 0, 8, 9, 5};
+    for (int i = 0 ; i < arr.length - 1 ; i++) {
+        int min = i;
+        for (int j = i + 1 ; j < arr.length ; j++) {
+            <b>if (arr[j] < arr[min]){
+                ...
+            }</b>
+        }
+        ...
+    }
+            </pre>
+            <p>
+                The if statement checks if the element at index <code>j</code> is less than the current minimum value.
+                If this algorithm were sorting is descending order, it would check if the element was greater than the maximum value.
+            </p>
+            <p>
+                Next, we need to set the index of the element with the minimum value to the current index:
+            </p>
+            <pre>
+    int arr [] = {6, 3, 7, 4, 1, 2, 0, 8, 9, 5};
+    for (int i = 0 ; i < arr.length - 1 ; i++) {
+        int min = i;
+        for (int j = i + 1 ; j < arr.length ; j++) {
+            if (arr[j] < arr[min]){
+                <b>min = j;</b>
+            }
+        }
+        ...
+    }
+            </pre>
+            <p>
+                If the element is less than the minimum value, then the index of the minimum value would be set to the index of the current element.
+                This comparison is repeated until the for loop is finished and every element in the unsorted portion of the array is checked.
+            </p>
+            <p>
+                Now, we need to swap the element with the minimum value with the first element of the unsorted portion of the array.
+                We can do this with the help of a temporary variable:
+            </p>
+            <pre>
+    int arr [] = {6, 3, 7, 4, 1, 2, 0, 8, 9, 5};
+    for (int i = 0 ; i < arr.length - 1 ; i++) {
+        int min = i;
+        for (int j = i + 1 ; j < arr.length ; j++) {
+            if (arr[j] < arr[min]){
+                min = j;
+            }
+        }
+        <b>int temp = arr[min];
+        arr[min] = arr[i];
+        arr[i] = temp;</b>
+    }
+            </pre>
+            <p>
+                The temporary variable is used to hold the minimum value as that index is being replaced with the first element of the unsorted portion.
+                Without the variable, there would be no way to swap the elements without losing one of them.
+            </p>
+            <p>
+                The sort is now complete!
+                If one were to print out the array every time an element was swapped, it would look like:
+            </p>
+            <pre>
+    6 3 7 4 1 2 0 8 9 5
+    0 3 7 4 1 2 6 8 9 5
+    0 1 7 4 3 2 6 8 9 5
+    0 1 2 4 3 7 6 8 9 5
+    0 1 2 3 4 7 6 8 9 5
+    0 1 2 3 4 7 6 8 9 5
+    0 1 2 3 4 5 6 8 9 7
+    0 1 2 3 4 5 6 8 9 7
+    0 1 2 3 4 5 6 7 9 8
+    0 1 2 3 4 5 6 7 8 9
+            </pre>
+            <p>
+                Let's add some square brackets to denote the unsorted portion:
+            </p>
+            <pre>
+    [6 3 7 4 1 2 0 8 9 5]
+    0 [3 7 4 1 2 6 8 9 5]
+    0 1 [7 4 3 2 6 8 9 5]
+    0 1 2 [4 3 7 6 8 9 5]
+    0 1 2 3 [4 7 6 8 9 5]
+    0 1 2 3 4 [7 6 8 9 5]
+    0 1 2 3 4 5 [6 8 9 7]
+    0 1 2 3 4 5 6 [8 9 7]
+    0 1 2 3 4 5 6 7 [9 8]
+    0 1 2 3 4 5 6 7 8 [9]
+            </pre>
+            <p>
+                As you can see, each of the smallest elements is swapped with the first element of the unsorted portion (the elements in the square brackets).
+                First, the 0 is swapped with the 6, then the 1 is swapped with the 3, then the 2 is swapped with the 7, and so on.
+                This process repeats until the maximum value is left in the unsorted portion, at which point the entire array is sorted.
+            </p>
+            <h5>
+                Efficiency and Big O Notation
+            </h5>
+            <p>
+                Not all sorting algorithms are made the same.
+                Some algorithms are faster with a smaller number of elements, and some are faster with a larger number of elements.
+                A way to portray the time complexity of a sorting algorithm is something called <i>big O notation</i>.
+            </p>
+            <p>
+                Big O notation is based off of <i>n</i>, the number of elements in an array.
+                For example, O(n) is a linear time complexity, and the number of operations that need to be done is equal to n.
+                O(n^2) is a quadratic time complexity, and the number of operations that need to be done is equal to n^2.
+                So, if an array has only one element, an algorithm with an time complexity of O(n) and an algorithm with a time complexity of O(n^2) would be the same efficiency.
+                This is because since n is equal to 1, n^2 is equal to 1^2 and both are equal to 1.
+                However, as there are more and more elements, an algorithm with a time complexity of O(n^2) would be much slower than one with a time complexity of O(n).
+                For example, when sorting an array with 21 elements, an algorithm with a time complexity of O(n) would have to make 21 operations, while an algorithm with a time complexity of O(n^2) would have to do 441 operations.
+            </p>
+        </p2>
+    </div>
 </html>

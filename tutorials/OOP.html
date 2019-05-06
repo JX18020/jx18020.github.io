@@ -30,55 +30,72 @@
     <h3>Object Oriented Programming (OOP)</h3>
     <div class = tutorials>
         <p2>
-            OOP stands for <i>Object-Oriented Programming</i>. Many programming languages are object-oriented, including Java.
-            <h6>
+            <p>
+                OOP stands for <i>Object-Oriented Programming</i>. Many programming languages are object-oriented, including Java.
+            </p>
+            <h4>
                 What Is Object-Oriented Programming?
-            </h6>
-            Object-oriented programming refers to the programming paradigm which involves the creation of <i>objects</i>.
-            This is meant to reflect the real world, with each object having attributes and behaviours.
-            OOP hinges on a number of basic concepts, including <i>encapsulation</i>, <i>inheritance</i>, and <i>polymorphism</i>.
-            <h6>
+            </h4>
+            <p>
+                Object-oriented programming refers to the programming paradigm which involves the creation of <i>objects</i>.
+                This is meant to reflect the real world, with each object having attributes and behaviours.
+                OOP hinges on a number of basic concepts, including <i>encapsulation</i>, <i>inheritance</i>, and <i>polymorphism</i>.
+            </p>
+            <h4>
                 Advantages and Disadvantages of Object-Oriented Programming
-            </h6>
-            Object-oriented programming isn't the only form of programming out there.
-            The two other main programming paradigms are <i>Functional Programming (FP)</i> and <i>Procedural Programming (PP)</i>.
-            <p></p>
-            Functional programming passes data through functions and computes data using mathematical functions.
-            Procedural programming works in a series of steps and is based on the concept of the procedure call.
-            Both paradigms are useful in their own ways, as with object-oriented programming.
-            <p></p>
-            <b>Advantages:</b>
-            <p></p>
-            The fact that object-oriented programming treats everything as objects means that the objects can be reused in different applications and projects.
-            This means that object-oriented programs are faster to develop and a programmer is able to use an existing library rather than create their own.
-            Furthermore, OOP uses a modular structure, which means that everything is easily maintainable without making big changes to the program.
-            Also, data is able to be hidden, so it is very secure.
-            <p></p>
-            <b>Disadvantages:</b>
-            <p></p>
-            One of the main disadvantages is that OOP programs can be tricky to create.
-            A programmer needs to have proper design skills and programming skills.
-            Not only that, an object-oriented program needs to be extensively planned out before any coding can begin.
-            <h6>
+            </h4>
+            <p>
+                Object-oriented programming isn't the only form of programming out there.
+                The two other main programming paradigms are <i>Functional Programming (FP)</i> and <i>Procedural Programming (PP)</i>.
+            </p>
+            <p>
+                Functional programming passes data through functions and computes data using mathematical functions.
+                Procedural programming works in a series of steps and is based on the concept of the procedure call.
+                Both paradigms are useful in their own ways, as with object-oriented programming.
+            </p>
+            <h5>
+                Advantages
+            </h5>
+            <p>
+                The fact that object-oriented programming treats everything as objects means that the objects can be reused in different applications and projects.
+                This means that object-oriented programs are faster to develop and a programmer is able to use an existing library rather than create their own.
+                Furthermore, OOP uses a modular structure, which means that everything is easily maintainable without making big changes to the program.
+                Also, data is able to be hidden, so it is very secure.
+            </p>
+            <h5>
+                Disadvantages
+            </h5>
+            <p>
+                One of the main disadvantages is that OOP programs can be tricky to create.
+                A programmer needs to have proper design skills and programming skills.
+                Not only that, an object-oriented program needs to be extensively planned out before any coding can begin.
+                </p>
+            <h4>
                 Objects
-            </h6>
-            Objects are the very fundamental aspects of object-oriented programming.
-            They are made to reflect the real world and can be reused in different applications.
-            Each object has as least one <i>attribute</i> and <i>behaviour</i>.
-            <p></p>
-            For example, a car is an object.
-            Each car has a certain number of wheels, a certain number of doors, a colour, a model, etc.
-            They also have behaviours such as driving, reversing, and braking.
-            In programming, an attribute or state translates into a <i>field</i> or <i>variables</i>, which can be manipulated.
-            A behaviour can be translated into a <i>method</i> (also known as a function or procedure), and these can be used to manipulate the attributes.
-            <h6>
+            </h4>
+            <p>
+                Objects are the very fundamental aspects of object-oriented programming.
+                They are made to reflect the real world and can be reused in different applications.
+                Each object has as least one <i>attribute</i> and <i>behaviour</i>.
+            </p>
+            <p>
+                For example, a car is an object.
+                Each car has a certain number of wheels, a certain number of doors, a colour, a model, etc.
+                They also have behaviours such as driving, reversing, and braking.
+                In programming, an attribute or state translates into a <i>field</i> or <i>variables</i>, which can be manipulated.
+                A behaviour can be translated into a <i>method</i> (also known as a function or procedure), and these can be used to manipulate the attributes.
+            </p>
+            <h4>
                 Classes
-            </h6>
-            Classes in object-oriented programming are essentially a template for an object.
-            Each class serves as a blueprint, and a copy of the class, or an <i>instance</i> of the class, can create any number of said objects.
-            A constructor is also able to create an object with specific details from the user, or as a default object.
-            <p></p>
-            For example, here is an implementation of a car:
+            </h4>
+            <p>
+                Classes in object-oriented programming are essentially a template for an object.
+                Each class serves as a blueprint, and a copy of the class, or an <i>instance</i> of the class, can create any number of said objects.
+                A constructor is also able to create an object with specific details from the user, or as a default object.
+            </p>
+            <p>
+                For example, here is an implementation of a car:
+            </p>
             <pre>
     public class Car {
         private String brand;
@@ -105,15 +122,18 @@
         }
     }
             </pre>
-            The car has the attributes of a brand, model, number of kilometers driven, amount of gas in the tank, and the capacity of the tank.
-            Its behaviours are to drive and fill its tank up.
-            The constructor allows one to create a car with the specifications of its brand, model, amount of gas, and tank capacity, while it sets the number of kilometers to zero (since a new car has not driven anywhere yet).
-            <p></p>
-            This car class is only a template to make Car objects, thus it doesn't have a main method.
-            We can create a demo class which creates the Car objects and executes their methods.
-            <p></p>
-            Here is a method which demos the Car class's methods:
-            <p></p>
+            <p>
+                The car has the attributes of a brand, model, number of kilometers driven, amount of gas in the tank, and the capacity of the tank.
+                Its behaviours are to drive and fill its tank up.
+                The constructor allows one to create a car with the specifications of its brand, model, amount of gas, and tank capacity, while it sets the number of kilometers to zero (since a new car has not driven anywhere yet).
+            </p>
+            <p>
+                This car class is only a template to make Car objects, thus it doesn't have a main method.
+                We can create a demo class which creates the Car objects and executes their methods.
+            </p>
+            <p>
+                Here is a method which demos the Car class's methods:
+            </p>
             <pre>
     public class CarDemo {
         public static void main(String[] args) {
@@ -137,21 +157,27 @@
         }
     }
             </pre>
-            <p></p>
-            The main method created 5 different cars, with different brands, models, gas, and tank capacities.
-            It then executed the <code>drive()</code> method for each of the cards, and also executed the <code>gasUp()</code> method.
-            <h6>
+            <p>
+                The main method created 5 different cars, with different brands, models, gas, and tank capacities.
+                It then executed the <code>drive()</code> method for each of the cards, and also executed the <code>gasUp()</code> method.
+            </p>
+            <h4>
                 Static and Instance Methods
-            </h6>
-            A method in a class represents a behaviour that the class possesses.
-            There are two main types of methods, <i>static methods</i> and <i>instance methods</i>.
-            <p></p>
-            <b>Instance Methods</b>
-            <p></p>
-            Instance methods are basically the regular methods that are used in a class.
-            These methods can have a return type, parameters and can be set to public or private, just like any other method.
-            <p></p>
-            For example, the following <code>eatFood()</code> method is an instance method in the Frog class:
+            </h4>
+            <p>
+                A method in a class represents a behaviour that the class possesses.
+                There are two main types of methods, <i>static methods</i> and <i>instance methods</i>.
+            </p>
+            <h5>
+                Instance Methods
+            </h5>
+            <p>
+                Instance methods are basically the regular methods that are used in a class.
+                These methods can have a return type, parameters and can be set to public or private, just like any other method.
+            </p>
+            <p>
+                For example, the following <code>eatFood()</code> method is an instance method in the Frog class:
+            </p>
             <pre>
     public class Frog {
         private int hungerLevel;
@@ -166,10 +192,13 @@
         }
     }
             </pre>
-            In order to use an instance method in a class, an object of that class must be created.
-            For example, to use the <code>eatFood()</code> method in a client class, a Frog object must be created.
-            <p></p>
-            Here is an example of a tester class which tests the <code>eatFood()</code> method in the Frog class:
+            <p>
+                In order to use an instance method in a class, an object of that class must be created.
+                For example, to use the <code>eatFood()</code> method in a client class, a Frog object must be created.
+            </p>
+            <p>
+                Here is an example of a tester class which tests the <code>eatFood()</code> method in the Frog class:
+            </p>
             <pre>
     public class FrogTester {
         public static void main(String [] args) {
@@ -178,19 +207,26 @@
         }
     }
             </pre>
-            As you can see, to use the <code>eatFood()</code> method, a Frog object had to be created.
-            <p></p>
-            <b>Static Methods</b>
-            <p></p>
-            Static methods are like instance methods, however, they can be used without creating an object of the class.
-            <p></p>
-            To create a static method, one needs to use the <i>static</i> keyword:
+            <p>
+                As you can see, to use the <code>eatFood()</code> method, a Frog object had to be created.
+            </p>
+            <h5>
+                Static Methods
+            </h5>
+            <p>
+                Static methods are like instance methods, however, they can be used without creating an object of the class.
+            </p>
+            <p>
+                To create a static method, one needs to use the <i>static</i> keyword:
+            </p>
             <pre>
     public static void methodName() {
         ...
     }
             </pre>
-            For example, the Frog class may have a method which returns the temperature of the pond:
+            <p>
+                For example, the Frog class may have a method which returns the temperature of the pond:
+            </p>
             <pre>
     public class Frog {
         private int hungerLevel;
@@ -211,10 +247,13 @@
         }
     }
             </pre>
-            In this case, the <code>getPondTemp()</code> method is a static method, and a client class would not need to create an object before using it.
-            Instead, it would use the name of the class, in the place of the object identifier.
-            <p></p>
-            For example, this is the tester class with the static method added:
+            <p>
+                In this case, the <code>getPondTemp()</code> method is a static method, and a client class would not need to create an object before using it.
+                Instead, it would use the name of the class, in the place of the object identifier.
+            </p>
+            <p>
+                For example, this is the tester class with the static method added:
+            </p>
             <pre>
     public class FrogTester {
         public static void main(String [] args) {
@@ -224,21 +263,27 @@
         }
     }
             </pre>
-            In this case, the <code>getPondTemp()</code> method could be used without the creation of an object.
-            <h6>
+            <p>
+                In this case, the <code>getPondTemp()</code> method could be used without the creation of an object.
+            </p>
+            <h4>
                 Encapsulation
-            </h6>
-            Notice the terms <i>public</i> and <i>private</i> in the sections of code above for the Car class.
-            When something is public, it is able to be accessed by other classes and applications.
-            When something is private, no other classes or applications can access that data.
-            This is called <i>encapsulation</i>.
-            <p></p>
-            Encapsulation (also known as data or information hiding) is essentially wrapping, or encapsulating, some form of data so that it cannot be directly accessed from the outside.
-            However, this doesn't mean that the data cannot be modified or accessed.
-            Through the use of <i>accessor</i> and <i>mutator methods</i>, one is able to access and change the data in a class.
-            An accessor method returns the data that is needed and a mutator method changes the data from the input given as a parameter.
-            <p></p>
-            Here are some examples of accessor and mutator methods (get and set methods) in a Box class:
+            </h4>
+            <p>
+                Notice the terms <i>public</i> and <i>private</i> in the sections of code above for the Car class.
+                When something is public, it is able to be accessed by other classes and applications.
+                When something is private, no other classes or applications can access that data.
+                This is called <i>encapsulation</i>.
+            </p>
+            <p>
+                Encapsulation (also known as data or information hiding) is essentially wrapping, or encapsulating, some form of data so that it cannot be directly accessed from the outside.
+                However, this doesn't mean that the data cannot be modified or accessed.
+                Through the use of <i>accessor</i> and <i>mutator methods</i>, one is able to access and change the data in a class.
+                An accessor method returns the data that is needed and a mutator method changes the data from the input given as a parameter.
+            </p>
+            <p>
+                Here are some examples of accessor and mutator methods (get and set methods) in a Box class:
+            </p>
             <pre>
     public class Box {
         private int length;
@@ -284,15 +329,18 @@
         }
     }
             </pre>
-            In the above class, all of the variables are set to private, which means that they cannot be directly accessed outside of the Box class.
-            This means that they are encapsulated.
-            The accessor methods, such as <code>getLength()</code>, <code>getColour()</code>, and <code>getVolume()</code> are public, as they need to be used in other classes in order to access the fields.
-            All of the accessor methods return the data type that is the same as the variable that they are trying the access.
-            The mutator methods, <code>setDimensions()</code> and <code>setColour()</code>, are also public, as they need to be used in other classes in order to change the values of the fields.
-            The mutator methods contain at least one parameter, which is used to change the value of one or more fields.
-            They are also mostly void methods, as they do not return anything.
-            <p></p>
-            Here is a demo of the get and set methods:
+            <p>
+                In the above class, all of the variables are set to private, which means that they cannot be directly accessed outside of the Box class.
+                This means that they are encapsulated.
+                The accessor methods, such as <code>getLength()</code>, <code>getColour()</code>, and <code>getVolume()</code> are public, as they need to be used in other classes in order to access the fields.
+                All of the accessor methods return the data type that is the same as the variable that they are trying the access.
+                The mutator methods, <code>setDimensions()</code> and <code>setColour()</code>, are also public, as they need to be used in other classes in order to change the values of the fields.
+                The mutator methods contain at least one parameter, which is used to change the value of one or more fields.
+                They are also mostly void methods, as they do not return anything.
+            </p>
+            <p>
+                Here is a demo of the get and set methods:
+            </p>
             <pre>
     public class BoxDemo {
         public static void main(String [] args) {
@@ -305,37 +353,46 @@
         }
     }
             </pre>
-            Output:
+            <p>
+                Output:
+            </p>
             <pre>
     Length of box: 4
     Volume of box: 96
     Colour of box: orange
             </pre>
-            <h6>
+            <h4>
                 Inheritance
-            </h6>
-            Inheritance is when a class <i>inherits</i> the attributes and behaviours of another class.
-            This means that all the methods (excluding constructors) and variables in the inherited class are able to be used in another class.
-            <p></p>
-            <b>Superclasses & Subclasses</b>
-            <p></p>
-            Objects often share similar characteristics with each other.
-            For example, a cat and a dog share the characteristics of a mammal, since they are both mammals.
-            A mammal and a reptile share the characteristics of an animal since they are both animals.
-            This is reflected in object-oriented programming.
-            <p></p>
-            A <i>class hierarchy tree</i> can be formed, with the most general class, the <i>Object class</i>, at the top, and more specific classes at the bottom (ex. a cat).
-            Each class in the tree is derived from another class, with the exception of the Object class, which is at the very top of the tree.
-            The derived class is called the <i>subclass</i> and the class from which the subclass is deriving from is called the <i>superclass</i>.
-            Every class is implicitly a subclass of the Object class.
-            A subclass inherits all of the methods and variables of its superclass.
-            The exception to this are constructors which cannot be inherited but can be invoked from the subclass.
-            <p></p>
-            To inherit a class, the <i>extends</i> keyword must be used.
-            A class can only extend one class at a time.
-            For example, a Cat <i>is a</i> Mammal, a Dog <i>is a</i> Mammal, and a Mammal <i>is an</i> Animal.
-            <p></p>
-            Here is how that would look like:
+            </h4>
+            <p>
+                Inheritance is when a class <i>inherits</i> the attributes and behaviours of another class.
+                This means that all the methods (excluding constructors) and variables in the inherited class are able to be used in another class.
+            </p>
+            <h5>
+                Superclasses & Subclasses
+            </h5>
+            <p>
+                Objects often share similar characteristics with each other.
+                For example, a cat and a dog share the characteristics of a mammal, since they are both mammals.
+                A mammal and a reptile share the characteristics of an animal since they are both animals.
+                This is reflected in object-oriented programming.
+            </p>
+            <p>
+                A <i>class hierarchy tree</i> can be formed, with the most general class, the <i>Object class</i>, at the top, and more specific classes at the bottom (ex. a cat).
+                Each class in the tree is derived from another class, with the exception of the Object class, which is at the very top of the tree.
+                The derived class is called the <i>subclass</i> and the class from which the subclass is deriving from is called the <i>superclass</i>.
+                Every class is implicitly a subclass of the Object class.
+                A subclass inherits all of the methods and variables of its superclass.
+                The exception to this are constructors which cannot be inherited but can be invoked from the subclass.
+            </p>
+            <p>
+                To inherit a class, the <i>extends</i> keyword must be used.
+                A class can only extend one class at a time.
+                For example, a Cat <i>is a</i> Mammal, a Dog <i>is a</i> Mammal, and a Mammal <i>is an</i> Animal.
+            </p>
+            <p>
+                Here is how that would look like:
+            </p>
             <pre>
     public class Animal {
         ...
@@ -353,15 +410,21 @@
         ...
     }
             </pre>
-            In this case, the Mammal class inherits all of the features of the Animal class, and the Cat class inherits all of the features from both the Animal and Mammal classes.
-            <p></p>
-            <b>Casting</b>
-            <p></p>
-            In object-oriented programming, an object is able to be <i>upcasted</i> and <i>downcasted</i>.
-            This just means that an object can be labeled as its superclass or its subclass.
-            <p></p>
-            Upcasting is always allowed, and thus Java upcasts automatically. <br>
-            This means that you are able to do
+            <p>
+                In this case, the Mammal class inherits all of the features of the Animal class, and the Cat class inherits all of the features from both the Animal and Mammal classes.
+            </p>
+            <h5>
+                Casting
+            </h5>
+            <p>
+                In object-oriented programming, an object is able to be <i>upcasted</i> and <i>downcasted</i>.
+                This just means that an object can be labeled as its superclass or its subclass.
+            </p>
+            <p>
+                Upcasting is always allowed, and thus Java upcasts automatically.
+                <br>
+                This means that you are able to do
+            </p>
             <pre>
     Animal a1 = new Cat();
             </pre>
@@ -373,14 +436,18 @@
             <pre>
     Animal a2 = new Mammal();
             </pre>
-            without any problems.
-            <p></p>
-            Downcasting, however, must be done manually, as not every object can be downcasted to any subclass.
-            For example, if an Animal is created by using the <code>Animal()</code> constructor, it cannot be downcasted to any of its subclasses since it is neither a Mammal nor a Dog nor a Cat.
-            However, if a Dog was upcasted first to an Animal, it is able to be downcasted to a Mammal or back to a Dog.
-            It cannot be downcasted to a Cat, however, as a Dog is not a Cat.
-            <p></p>
-            Here are some examples of downcasting which will work:
+            <p>
+                without any problems.
+            </p>
+            <p>
+                Downcasting, however, must be done manually, as not every object can be downcasted to any subclass.
+                For example, if an Animal is created by using the <code>Animal()</code> constructor, it cannot be downcasted to any of its subclasses since it is neither a Mammal nor a Dog nor a Cat.
+                However, if a Dog was upcasted first to an Animal, it is able to be downcasted to a Mammal or back to a Dog.
+                It cannot be downcasted to a Cat, however, as a Dog is not a Cat.
+            </p>
+            <p>
+                Here are some examples of downcasting which will work:
+            </p>
             <pre>
     Animal a3 = new Dog();  // automatic upcasting from Dog to Animal
     Mammal m2 = (Mammal) a3;    // downcasting from Animal to Mammal
@@ -393,7 +460,9 @@
     Mammal m3 = (Dog) a5;   // downcasting from Animal to Dog
                             // and then automatic upcasting to Mammal
             </pre>
-            And here are some examples of downcasting which will fail and throw a ClassCastException:
+            <p>
+                And here are some examples of downcasting which will fail and throw a ClassCastException:
+            </p>
             <pre>
     Animal a6 = new Cat();
     Dog d2 = (Dog) a6;
@@ -401,17 +470,22 @@
     Mammal m4 = new Mammal();
     Cat c2 = (Cat) m4;
             </pre>
-            For the first failed example, a Dog is indeed an Animal.
-            However, the Animal is just a Cat which has been upcasted to an Animal and is therefore not a Dog.
-            For the second failed example, a Cat is indeed a Mammal.
-            However, the Mammal object had been created using the <code>Mammal()</code> constructor, which means that the Mammal is not a Cat.
-            <p></p>
-            <b>Overriding Methods</b>
-            <p></p>
-            In a OOP program, a subclass is able to <i>override</i> a method from its superclass.
-            This means that when the method is called in the subclass, it will use the overridden method rather than the original from the superclass.
-            <p></p>
-            Here is a simple example demonstrating overriding methods:
+            <p>
+                For the first failed example, a Dog is indeed an Animal.
+                However, the Animal is just a Cat which has been upcasted to an Animal and is therefore not a Dog.
+                For the second failed example, a Cat is indeed a Mammal.
+                However, the Mammal object had been created using the <code>Mammal()</code> constructor, which means that the Mammal is not a Cat.
+            </p>
+            <h5>
+                Overriding Methods
+            </h5>
+            <p>
+                In a OOP program, a subclass is able to <i>override</i> a method from its superclass.
+                This means that when the method is called in the subclass, it will use the overridden method rather than the original from the superclass.
+            </p>
+            <p>
+                Here is a simple example demonstrating overriding methods:
+            </p>
             <pre>
     public class A {
         public void printClass() {
@@ -434,30 +508,39 @@
         }
     }
             </pre>
-            Output:
+            <p>
+                Output:
+            </p>
             <pre>
     Class A
     Class B
             </pre>
-            In the above example, class A has a method <code>printClass()</code> which is inherited by class B because B extends A.
-            <code>printClass()</code> is then overridden in B.
-            In the tester class, one object of each class is created and the same method name is called.
-            While A executes the original method, B executes the overridden one.
-            <p></p>
-            One of the most commonly overridden methods is the <code>toString()</code> method which is from the Object class.
-            It is usually overridden to be able to output useful information to the user, rather than the hash value.
-            <h6>
+            <p>
+                In the above example, class A has a method <code>printClass()</code> which is inherited by class B because B extends A.
+                <code>printClass()</code> is then overridden in B.
+                In the tester class, one object of each class is created and the same method name is called.
+                While A executes the original method, B executes the overridden one.
+            </p>
+            <p>
+                One of the most commonly overridden methods is the <code>toString()</code> method which is from the Object class.
+                It is usually overridden to be able to output useful information to the user, rather than the hash value.
+            </p>
+            <h4>
                 Polymorphism
-            </h6>
-            Polymorphism refers to the idea that a single action can be performed in many different ways.
-            This concept can also be applied to object-oriented programming.
-            Multiple subclasses of a superclass can execute each method differently, and polymorphism allows each method to be performed in an intended way.
-            <p></p>
-            When a number of different instances of subclasses are upcasted to the same superclass and a shared method from the superclass is called, polymorphism will occur.
-            If the method is overridden in a subclass, the overridden method from each respective subclass will be called rather than the one from the superclass.
-            This allows each object to perform an action in a different way, despite sharing many of the same attributes and behaviours.
-            <p></p>
-            Here is an example of polymorphism:
+            </h4>
+            <p>
+                Polymorphism refers to the idea that a single action can be performed in many different ways.
+                This concept can also be applied to object-oriented programming.
+                Multiple subclasses of a superclass can execute each method differently, and polymorphism allows each method to be performed in an intended way.
+            </p>
+            <p>
+                When a number of different instances of subclasses are upcasted to the same superclass and a shared method from the superclass is called, polymorphism will occur.
+                If the method is overridden in a subclass, the overridden method from each respective subclass will be called rather than the one from the superclass.
+                This allows each object to perform an action in a different way, despite sharing many of the same attributes and behaviours.
+            </p>
+            <p>
+                Here is an example of polymorphism:
+            </p>
             <pre>
     public class Bank {
         public double getInterestRate() {
@@ -494,32 +577,42 @@
         }
     }
             </pre>
-            Output:
+            <p>
+                Output:
+            </p>
             <pre>
     RBC: 6.5%
     TD: 4.3%
     BMO: 8.2%
             </pre>
-            Although all three banks are instantiated as a Bank object, their individual <code>getInterestRate()</code> methods were executed when they were called.
-            <h6>
+            <p>
+                Although all three banks are instantiated as a Bank object, their individual <code>getInterestRate()</code> methods were executed when they were called.
+            </p>
+            <h4>
                 Abstraction
-            </h6>
-            Abstraction is the concept where only the functionality of a program is displayed to the user, and the other implementation is hidden.
-            In Java, abstraction can be achieved in two ways, abstract classes and interfaces.
-            <p></p>
-            <b>Abstract Classes and Methods</b>
-            <p></p>
-            An <i>abstract class</i> may or may not have abstract methods.
-            Abstract methods are methods which do not contain braces and end with a semicolon.
-            In other words, abstract methods do not have any implementation.
-            Although an abstract class may not have abstract methods, if a class has at least one abstract method, it must be declared as an abstract class.
+            </h4>
+            <p>
+                Abstraction is the concept where only the functionality of a program is displayed to the user, and the other implementation is hidden.
+                In Java, abstraction can be achieved in two ways, abstract classes and interfaces.
+            </p>
+            <h5>
+                Abstract Classes and Methods
+            </h5>
+            <p>
+                An <i>abstract class</i> may or may not have abstract methods.
+                Abstract methods are methods which do not contain braces and end with a semicolon.
+                In other words, abstract methods do not have any implementation.
+                Although an abstract class may not have abstract methods, if a class has at least one abstract method, it must be declared as an abstract class.
+            </p>
             <pre>
     public abstract class Superclass {
         public abstract void foo();
     }
             </pre>
-            An abstract class cannot be <i>instantiated</i>, only subclassed, which means an object cannot be created out of it.
-            When an abstract class is subclassed, the subclass must override and provide implementations for all abstract methods.
+            <p>
+                An abstract class cannot be <i>instantiated</i>, only subclassed, which means an object cannot be created out of it.
+                When an abstract class is subclassed, the subclass must override and provide implementations for all abstract methods.
+            </p>
             <pre>
     public abstract class Superclass {
         public abstract void foo();
@@ -531,21 +624,25 @@
         }
     }
             </pre>
-            <p></p>
-            <b>Interfaces</b>
-            <p></p>
-            One can think of an <i>interface</i> as a contract between the real world and the code.
-            It lays out the methods of a class, which <i>must</i> be implemented in the class.
-            An interface is like a class, but it can only contain constants, method signatures, default methods, static methods, and nested types.
-            This means that there are no variables, and implementation cannot be provided for any of the methods.
-            Additionally, all the methods in an interface are implicitly public and abstract.
-            Like abstract classes, interfaces cannot be instantiated.
-            <p></p>
-            To use an interface, a class must use the <i>implements</i> keyword.
-            Unlike extending classes, a class may implement more than one interface.
-            An interface cannot be extended a class, however, but an interface may be extended by another interface.
-            <p></p>
-            Here is the syntax for an interface:
+            <h5>
+                Interfaces
+            </h5>
+            <p>
+                One can think of an <i>interface</i> as a contract between the real world and the code.
+                It lays out the methods of a class, which <i>must</i> be implemented in the class.
+                An interface is like a class, but it can only contain constants, method signatures, default methods, static methods, and nested types.
+                This means that there are no variables, and implementation cannot be provided for any of the methods.
+                Additionally, all the methods in an interface are implicitly public and abstract.
+                Like abstract classes, interfaces cannot be instantiated.
+            </p>
+            <p>
+                To use an interface, a class must use the <i>implements</i> keyword.
+                Unlike extending classes, a class may implement more than one interface.
+                An interface cannot be extended a class, however, but an interface may be extended by another interface.
+            </p>
+            <p>
+                Here is the syntax for an interface:
+            </p>
             <pre>
     public interface Interface1 {
         void foo(); // interfaces are implicitly public and
@@ -574,14 +671,16 @@
         }
     }
             </pre>
-            Interfaces can be used when multiple unrelated classes need to use the same function.
-            Furthermore, interfaces can be implemented when the interface doesn't know anything about the objects implementing them.
-            This is because interfaces are completely abstract and it allows code to be reused very easily.
-            Some commonly implemented interfaces are the Comparable interface and the Cloneable interface.
-            Many classes implement these interfaces, even though they are completely unrelated.
-            For example, both the BigInteger class and the Calendar class in Java implement Comparable, even though they have nothing to do with each other.
-            Moreover, the Comparable interface does not know that these classes implement Comparable, so any class can implement this interface.
-            The same applies to the Cloneable interface.
+            <p>
+                Interfaces can be used when multiple unrelated classes need to use the same function.
+                Furthermore, interfaces can be implemented when the interface doesn't know anything about the objects implementing them.
+                This is because interfaces are completely abstract and it allows code to be reused very easily.
+                Some commonly implemented interfaces are the Comparable interface and the Cloneable interface.
+                Many classes implement these interfaces, even though they are completely unrelated.
+                For example, both the BigInteger class and the Calendar class in Java implement Comparable, even though they have nothing to do with each other.
+                Moreover, the Comparable interface does not know that these classes implement Comparable, so any class can implement this interface.
+                The same applies to the Cloneable interface.
+            </p>
         </p2>
     </div>
 </html>
