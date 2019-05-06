@@ -309,11 +309,148 @@
                     <td>O(n log n)</td>
                 </tr>
             </table>
+            <p>
+                Generally, the algorithms which are simpler to implement tend to be slower than those which are more difficult to implement.
+            </p>
             <h4>
                 Searching
             </h4>
             <p>
                 To search for an element in an array, one needs to use a sorting algorithm.
+                The two main sorting algorithms are <i>sequential search</i> and <i>binary search</i>.
+            </p>
+            <h5>
+                Sequential Search
+            </h5>
+            <p>
+                Sequential search (also known as linear search) is the most simple and basic way to search for an element in an array.
+                It involves looping through the array once and comparing all the elements until it is found.
+            </p>
+            <p>
+                Here is a simple implementation of sequential search:
+            </p>
+            <pre>
+    public int sequentialSearch(int [] arr, int target) {
+        for (int i = 0 ; i < arr.length ; i++) {
+            if (arr[i] == target) {
+                // returns the index of the element
+                return i;
+            }
+        }
+        // returns -1 if it is not found
+        return -1;
+    }
+            </pre>
+            <p>
+                In the above implementation, the method has two parameters, the array, and the value that is being searched for.
+                There is a for loop which runs through the array once, and it compares the current element with the target.
+                If the element is found, the index of the array is returned.
+                If the element is not found, the method returns -1.
+            </p>
+            <h5>
+                Binary Search
+            </h5>
+            <p>
+                Binary search is more complicated than sequential search, but is is generally faster.
+                However, the algorithm involves having to sort the array first.
+            </p>
+            <p>
+                How the algorithm works is that first, it compares the element in the very middle of the array to the target.
+                If the target is less than the found element, it narrows its search range to the lower half of the array if it is sorted in ascending order, or the upper half if it is sorted in descending order.
+                This process continues until the element is found.
+            </p>
+            <p>
+                The best way to implement binary search is to do it recursively.
+                <br>
+                To learn more about recursion, click <l><a href="arrays.html">here</a></l>.
+                <br>
+                A recursive binary search method would keep splitting the array is half until the element is either found or when the array only contains one element which is not equal to the target.
+            </p>
+            <p>
+                This is an example of a recursive binary search method:
+            </p>
+            <pre>
+    public int binarySearch(int [] arr, int srt, int end, int tar) {
+        if (start <= end) {
+            // the middle index
+            int mid = (srt + end) / 2;
+
+            // if the element from the middle index is equal to the
+            // target then return the index
+            if (tar == arr[mid])
+                return mid;
+
+            // if the element from the middle index is smaller than
+            // the target then it is in the lower half
+            if (tar < arr[mid])
+                return binarySearch(arr, srt, mid - 1, tar);
+
+            // if the element from the middle index is greater than
+            // the target then it is in the upper half
+            return binarySearch(arr, mid + 1, end, tar);
+        }
+
+        // if the target is not found
+        return -1;
+    }
+
+            </pre>
+            <p>
+                In this method, there are 4 parameters, the array sorted in ascending order, the start of the section which needs to be searched, the end of the section which needs to be searched, and the target value which is to be searched for.
+                First, the method checks if the start index is smaller than or equal to the end index.
+                If it is not, that means that the entire array has been searched and the target value is not found in the array.
+                In this case, the method would return -1.
+                If it is, then a new variable is declared which denotes the middle between the start and end indices.
+                Then, it checks if the target is equal to the element at middle index.
+                If it is, then the middle index is returned.
+                If it is smaller than the element at the middle index, the method is called again, with the start index staying the same and the end index being the middle index minus 1.
+                If it is greater than the element at the middle index, the method is called again, but this time the start index is the middle index plus one, and the end index stays the same.
+            </p>
+            <p>
+                The method recursively calls itself until the element is found, or the array has been searched and the element is not in the array.
+            </p>
+            <p>
+                While binary search can be done recursively, it can also be done iteratively using a while loop.
+            </p>
+            <p>
+                Here is implementation of an iterative solution to binary search:
+            </p>
+            <pre>
+    public int binarySearch (int [] arr, int tar) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        // while loop runs as long as the start index is smaller
+        // than or equal to the end index
+        while (start <= end) {
+            // the middle index
+            int mid = (start + end) / 2;
+
+            // if the element from the middle index is equal to the
+            // target then return the index
+            if (tar == arr[mid)
+                return mid;
+
+            // if the element from the middle index is smaller than
+            // the target then it is in the lower half
+            else if (tar < arr[mid])
+                end = mid - 1;
+
+            // if the element from the middle index is greater than
+            // the target then it is in the upper half
+            else
+                start = mid + 1;
+        }
+
+        // if the target is not found
+        return -1;
+    }
+            </pre>
+            <p>
+                When done iteratively, the while loop keeps running until the target is either found or the start index becomes greater than the end index.
+                If the target is smaller than the element at the middle index, the end index becomes the middle index minus 1.
+                If the target is greater than the element at the middle index, the start index becomes the middle index plus 1.
+                Everything else is basically the same as the recursive solution.
             </p>
         </p2>
     </div>
