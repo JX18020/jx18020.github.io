@@ -103,7 +103,7 @@
     }
             </pre>
             <p>
-                The reason it is set to variable <code>i</code> is because that is the index of the start of the unsorted portion of the array.
+                The reason it is set to the variable <code>i</code> is because that is the index of the start of the unsorted portion of the array.
             </p>
             <p>
                 Next, we need another for loop, which runs inside the other for loop:
@@ -139,7 +139,7 @@
             </pre>
             <p>
                 The if statement checks if the element at index <code>j</code> is less than the current minimum value.
-                If this algorithm were sorting is descending order, it would check if the element was greater than the maximum value.
+                If this algorithm were sorting in descending order, it would check if the element was greater than the maximum value.
             </p>
             <p>
                 Next, we need to set the index of the element with the minimum value to the current index:
@@ -227,10 +227,10 @@
                 A way to portray the time complexity of a sorting algorithm is something called <i>big O notation</i>.
             </p>
             <p>
-                Big O notation is based off of <i>n</i>, the number of elements in an array.
+                Big O notation is based on <i>n</i>, the number of elements in an array.
                 For example, O(n) is a linear time complexity, and the number of operations that need to be done is equal to n.
                 O(n^2) is a quadratic time complexity, and the number of operations that need to be done is equal to n^2.
-                So, if an array has only one element, an algorithm with an time complexity of O(n) and an algorithm with a time complexity of O(n^2) would be the same efficiency.
+                So, if an array has only one element, an algorithm with a time complexity of O(n) and an algorithm with a time complexity of O(n^2) would be the same efficiency.
                 This is because since n is equal to 1, n^2 is equal to 1^2 and both are equal to 1.
                 However, as there are more and more elements, an algorithm with a time complexity of O(n^2) would be much slower than one with a time complexity of O(n).
                 For example, when sorting an array with 21 elements, an algorithm with a time complexity of O(n) would have to make 21 operations, while an algorithm with a time complexity of O(n^2) would have to do 441 operations.
@@ -242,7 +242,7 @@
                 Every sorting algorithm has a best case time complexity, a worst case time complexity, and an average case time complexity.
                 For example, selection sort's best case, worst case, and average are all O(n^2).
                 This means that selection sort is considered a very slow sorting algorithm.
-                The reason that all of selection sort's cases are the same time complexity is because even if it is given an already sorted array, it still has to compare all of its elements.
+                The reason that all of selection sort's cases are the same time complexity is that even if it is given an already sorted array, it still has to compare all of its elements.
             </p>
             <p>
                 From fastest to slowest, here are the time complexities in big O notation:
