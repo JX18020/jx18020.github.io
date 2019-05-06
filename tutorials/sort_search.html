@@ -351,7 +351,7 @@
                 Binary Search
             </h5>
             <p>
-                Binary search is more complicated than sequential search, but is is generally faster.
+                Binary search is more complicated than sequential search, but it is generally faster.
                 However, the algorithm involves having to sort the array first.
             </p>
             <p>
@@ -451,6 +451,42 @@
                 If the target is smaller than the element at the middle index, the end index becomes the middle index minus 1.
                 If the target is greater than the element at the middle index, the start index becomes the middle index plus 1.
                 Everything else is basically the same as the recursive solution.
+            </p>
+            <h5>
+                Time Complexity
+            </h5>
+            <p>
+                Like sorting algorithms, searching algorithms also have a time complexity.
+            </p>
+            <p>
+                Here are the best case, worst case, and average case time complexities for sequential search and binary search.
+            </p>
+            <table>
+                <tr>
+                    <th>Searching Algorithm</th>
+                    <th>Best Case</th>
+                    <th>Worst Case</th>
+                    <th>Average Case</th>
+                </tr>
+                <tr>
+                    <td>Sequential Search</td>
+                    <td>O(1)</td>
+                    <td>O(n)</td>
+                    <td>O(n)</td>
+                </tr>
+                <tr>
+                    <td>Binary Search</td>
+                    <td>O(1)</td>
+                    <td>O(log n)</td>
+                    <td>O(log n)</td>
+                </tr>
+            </table>
+            <p>
+                For both algorithms, the best case is when the element is found on the first try.
+            </p>
+            <p>
+                Also, while binary search is faster than sequential search, keep in mind that binary search only works for sorted arrays.
+                To search for an element in an unsorted array, it would be faster just to use sequential search than to sort the array and then use binary search.
             </p>
         </p2>
     </div>
