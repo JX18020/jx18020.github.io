@@ -233,10 +233,10 @@
                 Using Arrays as Parameters
             </h4>
             <p>
-                Normally, when a value is used as a parameter in a method, it is <i>passed by reference</i>.
+                Normally, when a value is used as a parameter in a method, it is <i>passed by value</i>.
                 What this means is that a reference to the variable is passed, and whatever is done to that variable in the method does not affect the original variable.
-                However, when using an array as a parameter in a method, it is <i>passed by value</i>.
-                Instead of passing a reference of that array, the array itself is passed, and whatever is done to the array in the method affects the original array.
+                However, when using an array as a parameter in a method, it is <i>passed by reference</i>.
+                Instead of passing a copy of that array, the array itself is passed, and whatever is done to the array in the method affects the original array.
                 Here is an example of the difference between passing by reference and passing by value.
             </p>
             <pre>
@@ -276,7 +276,7 @@
             </pre>
             <p>
                 As one can see, the int value in the class remained unchanged, but the int values in the array all increased.
-                This is due to the fact that the int value is passed by reference but the array is passed by value.
+                This is due to the fact that the int value is passed by value but the array is passed by reference.
             </p>
             <h4>
                 ArrayLists
@@ -284,8 +284,8 @@
             <p>
                 An ArrayList is an object and functions similarly to arrays.
                 However, an ArrayList cannot store primitive data types such as an int, double, or char.
-                If one wants to use a primitive data type with an ArrayList, one can use their <i>wrapper classes</i>, such as the Integer class, the Double class or the Character class.
-                It extends the List interface and has a multitude of methods which are useful for manipulating the contents of the array.
+                If one wants to use a primitive data type with an ArrayList, one can use their <i>wrapper classes</i>, such as the Integer class, the Double class, or the Character class.
+                It implements the List interface and has a multitude of methods which are useful for manipulating the contents of the array.
             </p>
             <h5>
                 Initializing an ArrayList
@@ -321,7 +321,7 @@
                 Unlike regular arrays, the capacity of an ArrayList can change.
                 The length of an ArrayList can be accessed using the size() method.
                 The size will automatically increase or decrease if one adds or removes elements.
-                When creating an ArrayList with a default constructor, its capacity will automatically be set to 10, and it can be expanded to cut to fit a certain number of elements.
+                When creating an ArrayList with a default constructor, its capacity will automatically be set to 10, and it can be expanded to fit a certain number of elements.
             </p>
             <h5>
                 ArrayList Methods
