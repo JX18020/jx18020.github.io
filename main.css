@@ -211,15 +211,6 @@ div {
 	line-height: 25px;
 }
 
-.contact {
-	display: inline-block;
-  	background-color: ffd582;
-	text-align: center;
-	margin: 0;
-  	padding: 50px;
-	height: 28px;
-}
-
 .box {
 	display: inline-block;
   	background-image: url("images/background.png");
