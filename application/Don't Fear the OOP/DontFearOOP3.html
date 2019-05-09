@@ -1,0 +1,64 @@
+<html>
+<head> <title>Don't Fear The OOP</title></head>
+<body bgcolor = "FFAAFA" alink = "FFFF00" vlink = "BA66EE"><font face = "Calibri"> 
+So, believe it or not, you've just seen object-oriented programming in action. Our author Eunice first created a class (that was the binder) that roughly described a castle, then turned to her main plot page and created (instantiated) a castle object, which she then called calcifer. 
+Now, for her king, Eunice needs a different binder. So she puts "castles" back on the shelf, and goes to pick up a new binder. Her hand passes over many different titles, like "Animals", "Food", "Weather", "Music", all the essentials for a good fairy tale, until she finally comes to the binder she wants: "Humans". She opens up to the introduction: 
+<font color = 009900><b><p>
+"All humans start out with two legs, two arms, eyes, a nose, and a mouth. They are either male or female, have a name, have a horse with a name, and have different preferences in clothing. If someone asks, humans can respond with their name." 
+</b><p>
+You'll notice that Eunice likes to make all body parts variables. This gives her the freedom to change their values later in the story. It is her well-known propensity for gore that has drawn so many readers to Eunice's particular brand of fairy tale. You'll note that she left the sex, name, horse name, and clothing preference unspecified. Just so all of her humans don't look identical, Eunice prefers to specify those variables when she writes the plot. 
+<font color = 555500><b><p>
+Humans <br>
+have a certain number of legs  <br> &nbsp
+have a certain number of arms  <br> &nbsp
+have a certain number of eyes  <br> &nbsp
+have a certain number of noses  <br> &nbsp
+have a certain number of mouths  <br> &nbsp
+have a name have a certain sex  <br> &nbsp
+have a horse with a name  <br> &nbsp
+have a strong preference in clothing <p> 
+
+A standard human would start with  <br> &nbsp
+two legs <br> &nbsp
+two arms  <br> &nbsp
+two eyes  <br> &nbsp
+one nose  <br> &nbsp
+one mouth  <p> 
+When someone asks for your name <br> &nbsp
+Tell them your name <p>
+
+</b>
+You, being as sharp as you are, notice that Eunice's human has some interactivity. She can ask its name, and it will respond. This is called a method and is your key to a good time. We'll get to it in just a few pages. <font color = AA0000><b><p>
+public class Humans   <br> 
+{   <br> &nbsp
+int legs;   <br> &nbsp
+int arms;   <br> &nbsp
+int eyes;   <br> &nbsp
+int nose;   <br> &nbsp
+int mouth;   <br> &nbsp
+String name;   <br> &nbsp
+String sex;   <br> &nbsp
+String horseName;   <br> &nbsp
+String clothingPreference;   <br> &nbsp
+
+public Humans()  <br> &nbsp 
+{   <br> &nbsp &nbsp
+legs = 2;    <br> &nbsp &nbsp
+arms = 2;    <br> &nbsp &nbsp   
+eyes = 2;    <br> &nbsp &nbsp   
+nose = 1;    <br> &nbsp &nbsp
+mouth = 1;    <br> &nbsp 
+} <br> &nbsp 
+
+public String whatIsYourName() <br> &nbsp 
+{ <br> &nbsp &nbsp
+return name; <br> &nbsp 
+} <br> 
+} <p>
+
+</b>
+Boy, it all makes sense except that bit about that "public String whatIsYourName()" business, eh? Don't worry. We'll get to all that in just a little bit.
+<a href="DontFearOOP2.html"><p><u>Previous Page</u></a>
+<object align="right">
+<a href="DontFearOOP4.html"><p><u>Next Page</u></a>
+</html>

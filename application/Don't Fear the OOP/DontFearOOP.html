@@ -1,0 +1,56 @@
+<html>
+<head> <title>Don't Fear The OOP</title></head>
+<body bgcolor = "FABCFA" alink = "FFFF00" vlink = "BA66EE"><font face = "Calibri"> 
+<center><u><b>Don't Fear The OOP: By Jake and Julia
+</b></u></center>
+<br>
+Meet Eunice. Eunice writes fairy tales. Her books about fairy tales have become so popular that everybody rushes to buy them. Her readers are never disappointed, because Eunice's books are very consistent. How does she manage this? 
+Well, before Eunice writes anything, she sits down at her desk, sweeps aside the clutter, and places a single piece of paper down on her desk. It is on this one page that she writes her whole story. 
+How can Eunice get the whole story onto one page? Simple. Everything she writes on the page is just a sequence of events, or plot. Setting, character development, and how her characters interact is all taken care of elsewhere. How does she do that? Let's find out. You see, Eunice, more than anything else, is orderly and consistent. It's what has made her books so popular. Let's say that she has just sat down to write "Feast in the Banquet Hall", her thirty-fifth book. 
+The first thing that Eunice needs is a setting. So she pulls down a binder she has marked "castles", opens to the first page, and reads the first few lines: 
+<font color = 009900><b><p>
+Every castle has a few key ingredients: walls, inhabitants, gates, and a few animals. A standard castle would have four walls and be located East of the Rhine sometime around 1400. 
+</b><p>
+This description of a castle, while not very profound, did two important things: 1) It established the key ingredients for a castle and 2) It gave several values that might occur in a default castle. 
+<font color = 555500><b><p>
+Castle<br>
+&nbsp has a certain number of walls<br>
+&nbsp has a certain number of inhabitants<br>
+&nbsp has a certain number of gates<br>
+&nbsp has a certain number of animals<br>
+&nbsp is located somewhere <br>
+&nbsp exists at a certain time<br> 
+A typical Castle would have<br> 
+&nbsp number of walls = 4<br>
+&nbsp location = Bavaria<br>
+&nbsp time period = 1400<p>
+</b>
+It may seem that Eunice has a strange way of writing, but to her, it's straightforward. The first line on the page states that Eunice is defining a castle. You may have noticed that when Eunice needs to write two words, she won't use a space. There is a reason for this. If she puts spaces in, her editor in New York, a stickler for details, gets confused. 
+The next step, logically, is to then declare what sorts of variables (those things which define how the castle looks) that a class of castles might have. Walls, inhabitants, gates, etc. That being said, all that was left to do was to construct a sample castle, with default values for her variables. Whew! 
+<font color = AA0000><b><p>
+public class Castle <br>
+{ <br>
+&nbsp int walls;<br>
+&nbsp int inhabitants; <br>
+&nbsp int gates; <br>
+&nbsp int animals; <br>
+&nbsp String location; <br>
+&nbsp int time; <br>
+<br>
+&nbsp public Castle() <br>
+&nbsp { <br>
+&nbsp &nbsp walls= 4;<br>
+&nbsp &nbsp location = "Bavaria";<br>
+&nbsp &nbsp time = 1400; <br>
+&nbsp } <br>
+} <p>
+</b>
+In making her castle, Eunice is defining a class, not the castle itself (that would be an object). A class is like a (really mixing metaphors here) recipe without any measurements. It says what elements should be in a castle, but does not say in what amounts. 
+This is the process of declaring what the variables will be called, and what sort of values they will contain. For now, just worry about "int"s and "String"s. "int" stands for integer, and "String" for a string of letters. 
+The semi-colon in Eunice's way of letting her editor know that she is done with the preceding statement and that he can move on to the next one. For the most part, you can think of it like a period. 
+Finally, you'll notice that whenever Eunice wants to group a set of statements, she uses a curly brace, "{". Even though Eunice knows her characters very well, this lets her editor see where a group of statements begins and ends. Any class will always end with all the open curly braces being closed. 
+If Eunice does create (instantiate) a castle object eventually in her book, her editor will look to the same castles class to determine what that castle object should look like (Eunice will send the binders along with her manuscript). But where will her editor find out the number of stables and such? This is where we get into the constructor. 
+The constructor comes after all of the variables have been declared. It starts with public Castle(). The statements that follow are the default values for her variables; how Eunice's castle object would look if she simply instantiated it in her plot without specifying any of its values. 
+<object align="right">
+<a href="DontFearOOP2.html"><p><u>Next Page</u></a>
+</html>

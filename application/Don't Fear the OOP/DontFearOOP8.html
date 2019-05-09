@@ -1,0 +1,75 @@
+<html>
+<head> <title>Don't Fear The OOP</title></head>
+<body bgcolor = "FFAAFA" alink = "FFFF00" vlink = "BA66EE"><font face = "Calibri"> 
+At this point, it might be a good idea to review what Eunice's overall description of a king looks like. None of this material is new, just a compilation of what we've gone over in the past few pages. <font color = 009900><p><b>
+Kings are based on the idea of humans. They are identical, except that they have some additional qualities, namely a crown, a robe, a certain "look", some level of wealth, and a certain quantity of new soldiers in his army. Your standard king will look pompous, start the day out rich, and have 10 soldiers on duty. 
+Whenever the main plot says that a trade deal is successful, his level of wealth will go up by one. If someone asks a king how wealthy he is, the king will always respond with his level of wealth. If the king is supposed to recruit a new soldier,  recruit the specified new soldier, then add one to the number of new soldier he has recruited. Then print out "Yay! (the specified new Soldier) has been hired!" 
+<font color = 555500><p>
+Kings extends the idea of Humans. 
+A King <br> &nbsp
+has a crown. <br> &nbsp
+has a robe. <br> &nbsp
+has a "look". <br> &nbsp
+has some level of wealth. <br> &nbsp
+has a certain number of new soldiers.<br>
+ 
+For a given King, <br> &nbsp
+He will look pompous. <br> &nbsp
+He will start out rich. <br> &nbsp
+He will start the day with 0 new soldiers. <br> 
+
+tradeSucessfully<br> &nbsp
+wealth increases by one <br> 
+
+howWealthyAmI<br> &nbsp
+tell them how wealthy I am <br> 
+
+recruitNewSolider (name) <br> &nbsp
+add one to the number of new soldiers this king has recuited.<br> &nbsp
+print "Yay! (the specified new soldier) has been recruited! <br> 
+
+<font color = AA0000><p>
+public class King extends Humans <br>
+{ <br> &nbsp
+String crownColour; <br> &nbsp
+String robeColour; <br> &nbsp
+String look; <br> &nbsp
+int wealth; <br> &nbsp
+int numberOfNewSoldiers; <br> &nbsp
+Humans newSoldier; <br> &nbsp
+
+public King()<br> &nbsp
+{ <br> &nbsp &nbsp
+look = "Pompous";<br> &nbsp &nbsp 
+wealth = 10; <br> &nbsp &nbsp
+numberOfNewSoldiers = 0; <br> &nbsp 
+} <br> &nbsp 
+
+public void tradeSuccessfully ()  <br> &nbsp 
+{ <br> &nbsp &nbsp  
+wealth++; <br> &nbsp 
+}<br> &nbsp 
+
+public int howWealthyAmI ()  <br> &nbsp
+{  <br> &nbsp &nbsp  
+return wealth;  <br> &nbsp 
+}  <br> &nbsp 
+
+public void recruitNewSoldier (Humans newSolider)  <br> &nbsp 
+{  <br> &nbsp &nbsp  
+this.newSoldier = newSoldier;  <br> &nbsp &nbsp  
+numberOfNewSoldiers++;  <br> &nbsp &nbsp  
+System.out.println ("The King has recruited " + newSoldier.whatIsYourName());  <br> &nbsp 
+}  <br> 
+}
+
+<p>
+
+</b>
+We have introduced here the idea of subclasses. "Humans"; was a class, and "Kings" a subclass of it. 
+You may also be wondering why Eunice declared "Humans[] servants" in this class. Think of it this way. If the king is going to hire a servant, Eunice's editor has to know what a servant is. By declaring "Humans[] servants", her editor will know that a servant is a type of human. 
+Boy, it all makes sense except that bit about that "public String whatIsYourName()" business, eh? Don't worry. We'll get to all that in just a little bit.
+<a href="DontFearOOP7.html"><p><u>Previous Page</u></a>
+<object align="right">
+<a href="DontFearOOP9.html"><p><u>Next Page</u></a>
+</html>

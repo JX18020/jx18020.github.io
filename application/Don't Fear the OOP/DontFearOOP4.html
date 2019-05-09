@@ -1,0 +1,47 @@
+<html>
+<head> <title>Don't Fear The OOP</title></head>
+<body bgcolor = "FFAAFA" alink = "FFFF00" vlink = "BA66EE"><font face = "Calibri"> 
+As interesting as these descriptions of humans may be, however, they're not very specific. Eunice promised her editor a new story by Friday, so she decides to get down to business. Flipping through the "Humans" binder, she comes to the first chapter, entitled "Kings" 
+<font color = 009900><p>
+Kings are based on the idea of humans. They are identical, except that they have some additional qualities, namely a crown, a robe, a certain "look", some level of wealth, and a certain quantity of servants serving him. Your standard king will look pompous, start the day out rich, and not yet have captured any damsels. 
+Nothing really new here, except that we have peered deeper into Eunice's binders (classes) to see one of the subsections (subclasses). This particular subsection, kings, extended the idea of humans. <b><p>
+<font color = 555500><p>
+King extends the idea of Humans.   <br> &nbsp
+A King   <br> &nbsp
+has a crown.   <br> &nbsp
+has a robe.   <br> &nbsp
+has a "look".   <br> &nbsp
+has some level of wealth.   <br> &nbsp
+has a certain number of new soldier.  <br>
+ 
+For a given King,   <br> &nbsp
+He will look pompous.   <br> &nbsp
+He will start out rich.   <br> &nbsp
+He will start the day without having any new soldiers.
+
+<font color = AA0000><p>
+public class King extends Humans <br>
+{ <br> &nbsp
+String crownColor; <br> &nbsp
+String robeColor;  <br> &nbsp
+String look;  <br> &nbsp
+int wealth; <br> &nbsp
+int numberOfSoldiers;  <br> &nbsp
+Humans newSoldier;  <br> &nbsp
+
+public King()  <br> &nbsp
+{  <br> &nbsp&nbsp
+look = "Pompous";  <br> &nbsp&nbsp
+wealth = 500;  <br> &nbsp&nbsp
+numberOfServants = 0;  <br> &nbsp&nbsp
+}  <br> 
+} 
+<p>
+
+</b>
+We have introduced here the idea of subclasses. "Humans"; was a class, and "Kings" a subclass of it. 
+You may also be wondering why Eunice declared "Humans newSoldier" in this class. Think of it this way. If the king is going to recruit new soldier, Eunice's editor has to know what a new soldier is. By declaring "Humans newSoldier", her editor will know that a new soldier is a type of human. 
+<a href="DontFearOOP3.html"><p><u>Previous Page</u></a>
+<object align="right">
+<a href="DontFearOOP5.html"><p><u>Next Page</u></a>
+</html>

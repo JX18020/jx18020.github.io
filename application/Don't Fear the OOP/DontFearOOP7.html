@@ -1,0 +1,35 @@
+<html>
+<head> <title>Don't Fear The OOP</title></head>
+<body bgcolor = "FFAAFA" alink = "FFFF00" vlink = "BA66EE"><font face = "Calibri"> 
+At this point Eunice is pretty proud of herself, having created a king that can experience pretty much the full range of king-like activities. However, just to make for a good closing, Eunice decides to have the king have the ability to recruit a new soldier. She sets out to write one more method. What makes this different than her other methods is that it needs information about someone other that the king, namely the new soldier to be recruited. To allow for flexibility (and for a variety of new soldiers), Eunice decides to leave the identity of the new soldier blank for now. </b><p>
+<font color = 00AA00><b><p>
+If the king is supposed to recruit a new soldier, recruit the specified new soldier, then add one to the number of new soldiers he has recruited. Then print out "Yay! (the specified new soldier) has been recruited!"
+</b>
+<font color = 555500><b><p>
+
+recruitNewSoldier (name) <br> &nbsp
+add one to the number of new soldiers this king has recuited.<br> &nbsp
+print "Yay! (the specified new soldier) has been recruited! <p>
+</b>
+I have nothing to say to you people. If you feel bad about understanding everything so far, then you can read the red section for this one. <p>
+<font color = AA0000><p><b>
+public void recruitNewSoldier (Humans newSoldier) <br> 
+{ <br> &nbsp
+this.newSoldier = newSoldier; <br> &nbsp
+numberOfNewSoldiers++; <br> &nbsp
+System.out.println ("The King has recruited " + newSoldier.whatIsYourName()); <br> 
+} <p>
+</b>
+"Geez! I should have stayed with the green type," you're probably saying to yourself. Don't worry. It looks much worse than it is, and you probably understand most of it already. First, we have the name of the method: "recruitNewSoldier". No surprise there. Then, between those parentheses, we have "Humans newSoldier". What comes between those parentheses is called an argument. It helps make the method more specific. When Eunice starts writing her plot, she will at some point want her king to recruit (what sort of fairy tale would it be without it?). But if she just writes in her plot, "king.recruitNewSoldier ()", that wouldn't be very exciting for the reader. Who has been recruited? What is their name? Priding herself on always having the possibility of strong female characters, Eunice wants to add the name of the new soldier who is being recruited. Hence, when her plot says "recruitNewSoldier", it will also say the name of the new soldier being recruited as an argument. "Humans", which comes before "newSoldier", tells her editor that the thing being recruited is a human. Her editor doesn't like surprises, so that knowing that it is a human being recruited, rather than say, a sheep, reduces the amount of guesswork on his end. 
+
+The next line is another attempt by Eunice to please her rather persnickety editor, who is even more picky than she is! Even though she has supplied the name of the new soldier as an argument, her editor won't let her use it in the method until she has stated that the "newSoldier" that she declared as a "Human" variable is equal to the value given in the method's argument. 
+
+Having finally jumped through all of her editor's hoops (don't expect to understand all of that right away, it took Eunice a couple of weeks!), Eunice gets down to finishing the rest of her method. Once the king has tied up a damsel, the variable "numberOfNewSoldiers" will surely go up by one, so Eunice puts the same "++" after numberOfNewSoldiersthat she had put after "wealth" in the "tradeSuccessfully" example. 
+The stage being set, Eunice decides that it is time to let her readers know what is going on. Hence, the "System.out.println" statement. A bit wordy, but it let's her editor know that what comes between those parentheses goes into the final text of the book: all the text she puts in between quotation marks. Why is the variable 'newSoldierl.whatIsYourName' then not in quotation marks? Because it is not a literal, but rather an object's method. By keeping it out of the quotation marks, Eunice lets her editor know that he has to go look for the newSoldier object (he would find out that it was of the "Humans" class) then for the method "whatIsYourName" (he would see that it returned the new soldier’s name). All of that for a new soldier’s name! 
+
+Had she put newSoldier.whatIsYourName inside of the quotation marks, her editor would have printed out in the final copy of the book : "The king has tied up + newSoldier.whatIsYourName!". No Pulitzers for that. In order for her editor to substitute the variable name for the word name, Eunice closes the quotation marks before she writes it. The plus "+" lets her editor know that she wants to join the two statements. 
+Lucky for you, the next page is just review. 
+<a href="DontFearOOP6.html"><p><u>Previous Page</u></a>
+<object align="right">
+<a href="DontFearOOP8.html"><p><u>Next Page</u></a>
+</html>

@@ -42,7 +42,7 @@ h5 {
 }
 
 p1 {
-	text-align: center;
+	text-align: left;
 	color: black;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 20px;
@@ -203,14 +203,6 @@ div {
 	width: 400px;
 }
 
-.tutorials-intro {
-	display: inline-block;
-  	background-color: ffd582;
-	text-align: center;
-	margin: 0;
-  	padding: 50px;
-}
-
 .tutorials {
 	display: inline-block;
 	text-align: left;
@@ -228,14 +220,14 @@ div {
 	height: 28px;
 }
 
-.about {
+.box {
 	display: inline-block;
   	background-color: ffd582;
   	padding: 25px;
 	margin: 0;
 }
 
-.about-text {
+.box-text {
 	display: inline-block;
   	background-color: white;
 	text-align: left;
