@@ -159,7 +159,7 @@ div {
 
 .projects-left {
 	display: block;
-  	background-color: ffd582;
+	background-color: ffd582;
 	text-align: left;
 	margin-left: -8px;
 	margin-right: -8px;
@@ -171,7 +171,7 @@ div {
 
 .projects-right {
 	display: block;
-  	background-color: 515151;
+	background-color: 606060;
 	text-align: right;
 	margin-left: -8px;
 	margin-right: -8px;
@@ -222,8 +222,8 @@ div {
 
 .box {
 	display: inline-block;
-  	background-color: ffd582;
-  	padding: 25px;
+  	background-image: url("images/background.png");
+	padding: 25px;
 	margin: 0;
 }
 
