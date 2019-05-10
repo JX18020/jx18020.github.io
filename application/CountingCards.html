@@ -1,0 +1,312 @@
+<head>
+    <title>Julia Xie Portfolio - Example</title>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+<pre>
+import java.util.*;
+import java.io.*;
+
+/**
+ * This class sorts and counts the points in a hand of cards according to the rules in the card game Bridge.
+ * Then, it displays all the cards separated into suits and sorted in descending order.
+ *
+ * @author Julia Xie
+ * @author Jacob Kolyakov
+ * @author Jake Mayer
+ * @version 1.0 04/03/19
+ */
+public class CountingCards {
+    /**
+     * An ArrayList of each hand in the original file.
+     */
+    private ArrayList<String> originalHands = new ArrayList<>();
+    /**
+     * An ArrayList of every suit, which contains every card.
+     */
+    private ArrayList<ArrayList<ArrayList<String>>> sortedHands = new ArrayList<>();
+    /**
+     * The name of the file used to read hands from.
+     */
+    private String fileName;
+    /**
+     * The total score of each hand.
+     */
+    private int scores[];
+    /**
+     * An array of each card in a hand.
+     */
+    private String cards[] = new String[13];
+
+    /**
+     * \
+     * Class constructor for the CountingCards class.
+     *
+     * @param filename the name of the file being read
+     */
+    public CountingCards(String filename) {
+        fileName = filename;
+    }
+
+    /**
+     * Reads every card into a file and separates them by hands.
+     *
+     * @throws FileNotFoundException Exception may occur when reading a file.
+     */
+    public void readHands() throws FileNotFoundException {
+        Scanner in;
+        String temp;
+        in = new Scanner(new File(fileName));
+        while (in.hasNext()) {
+            temp = in.nextLine ();
+            if (!(temp.equals (""))) {
+                originalHands.add(temp);
+            }
+        }
+    }
+
+    /**
+     * Separates each hand into the four suits, hearts, diamonds, spades, and clubs.
+     * It then replaces the cards that are a ten, jack, queen, king, or age with a numerical value.
+     * It then changes each ten, jack, queen, king, and ace back to its original notation.
+     * It then sorts each suits in each hand in descending order using an insertion sort algorithm.
+     */
+    public void sortHands() {
+        ArrayList<ArrayList<String>> suits = new ArrayList<>(4);
+        ArrayList<String> hearts;
+        ArrayList<String> diamonds;
+        ArrayList<String> spades;
+        ArrayList<String> clubs;
+        String temp;
+        scores = new int[originalHands.size()];
+        originalHands.trimToSize();
+        for (int i = 0; i < originalHands.size(); i++) {
+            if (isValid(i)) {
+                hearts = new ArrayList<>();
+                diamonds = new ArrayList<>();
+                spades = new ArrayList<>();
+                clubs = new ArrayList<>();
+                suits.add(spades);
+                suits.add(hearts);
+                suits.add(diamonds);
+                suits.add(clubs);
+                // if the cards are a ten, jack, queen, king, or ace they get assigned a numerical value
+                for (int j = 0; j < 13; j++) {
+                    cards[j] = originalHands.get(i).substring(j * 2, j * 2 + 2);
+                    if (cards[j].charAt(1) == 'D') {
+                        if (cards[j].charAt(0) == 'T') {
+                            diamonds.add("10D");
+                        } else if (cards[j].charAt(0) == 'J') {
+                            diamonds.add("11D");
+                            scores[i]++;
+                        } else if (cards[j].charAt(0) == 'Q') {
+                            diamonds.add("12D");
+                            scores[i] += 2;
+                        } else if (cards[j].charAt(0) == 'K') {
+                            diamonds.add("13D");
+                            scores[i] += 3;
+                        } else if (cards[j].charAt(0) == 'A') {
+                            diamonds.add("14D");
+                            scores[i] += 4;
+                        } else {
+                            diamonds.add(cards[j]);
+                        }
+                    } else if (cards[j].charAt(1) == 'H') {
+                        if (cards[j].charAt(0) == 'T') {
+                            hearts.add("10H");
+                        } else if (cards[j].charAt(0) == 'J') {
+                            hearts.add("11H");
+                            scores[i]++;
+                        } else if (cards[j].charAt(0) == 'Q') {
+                            hearts.add("12H");
+                            scores[i] += 2;
+                        } else if (cards[j].charAt(0) == 'K') {
+                            hearts.add("13H");
+                            scores[i] += 3;
+                        } else if (cards[j].charAt(0) == 'A') {
+                            hearts.add("14H");
+                            scores[i] += 4;
+                        } else {
+                            hearts.add(cards[j]);
+                        }
+                    } else if (cards[j].charAt(1) == 'S') {
+                        if (cards[j].charAt(0) == 'T') {
+                            spades.add("10S");
+                        } else if (cards[j].charAt(0) == 'J') {
+                            spades.add("11S");
+                            scores[i]++;
+                        } else if (cards[j].charAt(0) == 'Q') {
+                            spades.add("12S");
+                            scores[i] += 2;
+                        } else if (cards[j].charAt(0) == 'K') {
+                            spades.add("13S");
+                            scores[i] += 3;
+                        } else if (cards[j].charAt(0) == 'A') {
+                            spades.add("14S");
+                            scores[i] += 4;
+                        } else {
+                            spades.add(cards[j]);
+                        }
+                    } else {
+                        if (cards[j].charAt(0) == 'T') {
+                            clubs.add("10C");
+                        } else if (cards[j].charAt(0) == 'J') {
+                            clubs.add("11C");
+                            scores[i]++;
+                        } else if (cards[j].charAt(0) == 'Q') {
+                            clubs.add("12C");
+                            scores[i] += 2;
+                        } else if (cards[j].charAt(0) == 'K') {
+                            clubs.add("13C");
+                            scores[i] += 3;
+                        } else if (cards[j].charAt(0) == 'A') {
+                            clubs.add("14C");
+                            scores[i] += 4;
+                        } else {
+                            clubs.add(cards[j]);
+                        }
+                    }
+                }
+                for (int j = 0; j < 4; j++) {
+                    if (suits.get(j).isEmpty()) {
+                        scores[i] += 3;
+                    } else if (suits.get(j).size() == 1) {
+                        scores[i] += 2;
+                    } else if (suits.get(j).size() == 2) {
+                        scores[i] += 1;
+                    }
+                }
+                // trims the ArrayList to the correct size
+                hearts.trimToSize();
+                diamonds.trimToSize();
+                spades.trimToSize();
+                clubs.trimToSize();
+                for (int j = 0; j < 4; j++) {
+                    if (suits.get(j).size() > 1) {
+                        // insertion sort for all the cards in each hand and suit
+                        for (int k = 1; k < suits.get(j).size(); k++) {
+                            int l = k - 1;
+                            temp = suits.get(j).get(k);
+                            while (l >= 0 && Integer.parseInt(suits.get(j).get(l).substring(0, suits.get(j).get(l).length() - 1)) < Integer.parseInt(temp.substring(0, temp.length() - 1))) {
+                                suits.get(j).add(l + 1, (suits.get(j).get(l)));
+                                suits.get(j).remove(l + 2);
+                                l -= 1;
+                            }
+                            suits.get(j).set(l + 1, temp);
+                        }
+                    }
+                }
+                // changes each ten, jack, queen, king, or ace back to its original form
+                for (int j = 0; j < 4; j++) {
+                    String suit = "";
+                    if (suits.get(j).equals(hearts)) {
+                        suit = "H";
+                    } else if (suits.get(j).equals(diamonds)) {
+                        suit = "D";
+                    } else if (suits.get(j).equals(spades)) {
+                        suit = "S";
+                    } else if (suits.get(j).equals(clubs)) {
+                        suit = "C";
+                    }
+                    for (int k = 0; k < suits.get(j).size(); k++) {
+                        if (suits.get(j).get(k).substring(0, suits.get(j).get(k).length() - 1).equals("10")) {
+                            suits.get(j).set(k, "T" + suit);
+                        } else if (suits.get(j).get(k).substring(0, suits.get(j).get(k).length() - 1).equals("11")) {
+                            suits.get(j).set(k, "J" + suit);
+                        } else if (suits.get(j).get(k).substring(0, suits.get(j).get(k).length() - 1).equals("12")) {
+                            suits.get(j).set(k, "Q" + suit);
+                        } else if (suits.get(j).get(k).substring(0, suits.get(j).get(k).length() - 1).equals("13")) {
+                            suits.get(j).set(k, "K" + suit);
+                        } else if (suits.get(j).get(k).substring(0, suits.get(j).get(k).length() - 1).equals("14")) {
+                            suits.get(j).set(k, "A" + suit);
+                        }
+                    }
+                }
+            }
+            // adds a clone of each hand to an ArrayList
+            sortedHands.add((ArrayList) suits.clone());
+            suits.clear();
+        }
+    }
+
+    /**
+     * Displays each hand separated into each suit and sorted in descending order.
+     * If the hand isn't valid then it will display "Invalid Hand";
+     * It will also display the total score of the hand.
+     */
+    public void displayHands() {
+        sortedHands.trimToSize();
+        for (int i = 0; i < sortedHands.size(); i++) {
+            if (sortedHands.get(i).isEmpty()) {
+                System.out.println("Invalid Hand");
+                System.out.println();
+            } else {
+                for (int j = 0; j < sortedHands.get(i).size(); j++) {
+                    if (j == 0) {
+                        System.out.print("Spades: ");
+                    } else if (j == 1) {
+                        System.out.print("Hearts: ");
+                    } else if (j == 2) {
+                        System.out.print("Diamonds: ");
+                    } else if (j == 3) {
+                        System.out.print("Clubs: ");
+                    }
+                    for (int k = 0; k < sortedHands.get(i).get(j).size(); k++) {
+                        System.out.print(sortedHands.get(i).get(j).get(k) + " ");
+                    }
+                    System.out.println();
+                }
+                System.out.println("Total Score: " + scores[i]);
+                System.out.println();
+            }
+        }
+    }
+
+    /**
+     * Checks if the original bridge hand is valid or not.
+     * A hand is valid if it has 13 cards, is correctly notated, and does not have any duplicate cards.
+     *
+     * @param index the index of the card in the hand
+     * @return true if the hand is valid, false if it is not.
+     */
+    public boolean isValid(int index) {
+        if (originalHands.get(index).length() != 26) {
+            return false;
+        }
+        for (int i = 0; i < 26; i++) {
+            if (i % 2 == 0) {
+                if ((originalHands.get(index).charAt(i) < '2' || originalHands.get(index).charAt(i) > '9') && originalHands.get(index).charAt(i) != 'A' && originalHands.get(index).charAt(i) != 'T' && originalHands.get(index).charAt(i) != 'J' && originalHands.get(index).charAt(i) != 'Q' && originalHands.get(index).charAt(i) != 'K') {
+                    return false;
+                }
+            } else {
+                if (originalHands.get(index).charAt(i) != 'H' && originalHands.get(index).charAt(i) != 'D' && originalHands.get(index).charAt(i) != 'S' && originalHands.get(index).charAt(i) != 'C') {
+                    return false;
+                }
+            }
+        }
+        for (int i = 0; i < 13; i++) {
+            cards[i] = originalHands.get(index).substring(i * 2, i * 2 + 2);
+        }
+        for (int i = 1; i < 13; i++) {
+            for (int j = i; j < 13; j++) {
+                if (cards[i - 1].equals(cards[j])) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    /**
+     * This method will create the CountingCards object and call all its methods.
+     *
+     * @param args A string array containing the command line arguments.
+     * @throws FileNotFoundException Exception may happen when reading a file.
+     */
+    public static void main(String[] args) throws FileNotFoundException {
+        CountingCards c = new CountingCards("Cards.txt");
+        c.readHands();
+        c.sortHands();
+        c.displayHands();
+    }
+}
+</pre>

@@ -1,0 +1,75 @@
+<head>
+    <title>Julia Xie Portfolio - Example</title>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+<pre>
+/**
+ * Represents a deck of cards.
+ *
+ * @author Julia Xie
+ * @version 1.0 April 24, 2019
+ */
+public class DeckofCards {
+    /**
+     * the deck of cards
+     */
+    private Card myDeck[];
+    /**
+     * the index of the card
+     */
+    private int myCardNum = 0;
+
+    /**
+     * Class constructor for the DeckofCards class.
+     * Sets each card in the deck to a different card.
+     */
+    public DeckofCards() {
+        String faces[] = {"Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+        String suits[] = {"Hearts", "Diamonds", "Clubs", "Spades"};
+        myDeck = new Card[52];
+        for (int n = 0; n < 52; n++) {
+
+            myDeck[n] = new Card(faces[n % 13], suits[n / 13]);
+        }
+    }
+
+    /**
+     * Returns the card on the top of the deck if there are more cards to deal, otherwise returns null.
+     * @return the card on the top of the deck or null if there isn't a card
+     */
+    public Card deal() {
+        if (myCardNum < 52)
+            return myDeck[myCardNum++];
+        else
+            return null;
+    }
+
+    /**
+     * Shuffles the cards to put them in a random order.
+     */
+    public void shuffle() {
+        int start;
+        int end;
+        Card[] section;
+
+        for (int i = 0; i < (int) (Math.random() * 70) + 50; i++) {
+            start = 0;
+            end = 0;
+            while (start >= end) {
+                start = (int) (Math.random() * 51);
+                end = (int) (Math.random() * 51) + 1;
+            }
+            section = new Card[end - start];
+            for (int j = 0; j < section.length; j++) {
+                section[j] = myDeck[j + start];
+            }
+            for (int j = 0; j < 52 - end; j++) {
+                myDeck[j + start] = myDeck[j + end];
+            }
+            for (int j = 0; j < section.length; j++) {
+                myDeck[j + start + 52 - end] = section[j];
+            }
+        }
+    }
+}
+</pre>

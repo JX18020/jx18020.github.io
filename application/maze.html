@@ -1,0 +1,33 @@
+<head>
+    <title>Julia Xie Portfolio - Example</title>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+<pre>
+/**
+ * Finds whether or not there is a path though a 5 by 5 maze.
+ *
+ * @param map the map of the maze
+ * @return true if there is path through the maze
+ */
+public static boolean maze(int[][] map) {
+    return searchPath(map, 0, 0) || searchPath(map, 1, 0) || searchPath(map, 2, 0) || searchPath(map, 3, 0) || searchPath(map, 4, 0) || searchPath(map, 0, 1) || searchPath(map, 0, 2) || searchPath(map, 0, 3) || searchPath(map, 0, 4);
+}
+
+/**
+ * Searches through the array/map to see if each index is a path.
+ * Note: an entrance can also be an exit.
+ *
+ * @param map the map of the maze
+ * @param row the index of the row that is being checked
+ * @param col the index of the column that is being checked
+ * @return true if the index is path
+ */
+public static boolean searchPath(int[][] map, int row, int col) {
+    if (row < 0 || row == 5 || col < 0 || col == 5 || map[row][col] == 1)
+        return false;
+    if (row == 4|| col == 4)
+        return true;
+    map[row][col] = 1;
+    return searchPath(map, row, col + 1) || searchPath(map, row + 1, col) || searchPath(map, row, col - 1) || searchPath(map, row - 1, col);
+}
+</pre>

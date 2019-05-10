@@ -1,0 +1,43 @@
+<head>
+    <title>Julia Xie Portfolio - Example</title>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+<pre>
+/**
+ * Represents a card.
+ *
+ * @author Julia Xie
+ * @version 1.0 April 24, 2019
+ */
+public class Card {
+    /**
+     * the face of the card
+     */
+    String myFace;
+    /**
+     * the suit of the card
+     */
+    String mySuit;
+
+    /**
+     * Class constructor for the Card class.
+     * Sets the face and suit of the card.
+     *
+     * @param theFace the face of the card
+     * @param theSuit the suit of the card
+     */
+    public Card(String theFace, String theSuit) {
+        myFace = theFace;
+        mySuit = theSuit;
+    }
+
+    /**
+     * Returns the name of the card.
+     *
+     * @return the face and suit of the card
+     */
+    public String toString() {
+        return myFace + " of " + mySuit;
+    }
+}
+</pre>
