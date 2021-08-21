@@ -101,7 +101,7 @@ li {
 
 li a, .dropbtn {
   	display: inline-block;
-	color: 424242;
+	color: #424242;
 	text-align: center;
   	padding: 14px 16px;
   	text-decoration: none;
@@ -110,7 +110,7 @@ li a, .dropbtn {
 
 li a:hover, .dropdown:hover .dropbtn {
 	color: white;
-  	background-color: 515151;
+  	background-color: #515151;
 }
 
 li.dropdown {
@@ -118,7 +118,7 @@ li.dropdown {
 }
 
 li a.active {
-  	background-color: ffaa00;
+  	background-color: #ffaa00;
 	color: white;
 }
 
@@ -159,7 +159,7 @@ div {
 
 .projects-left {
 	display: block;
-	background-color: ffd582;
+	background-color: #ffd582;
 	text-align: left;
 	margin-left: -8px;
 	margin-right: -8px;
@@ -171,7 +171,7 @@ div {
 
 .projects-right {
 	display: block;
-	background-color: 606060;
+	background-color: #606060;
 	text-align: right;
 	margin-left: -8px;
 	margin-right: -8px;
@@ -228,15 +228,15 @@ div {
 }
 
 l a:link {
-  	color: 4b5b7f;
+  	color: #4b5b7f;
 }
 
 l a:visited {
-  	color: 4b5b7f;
+  	color: #4b5b7f;
 }
 
 l a:hover {
-  	color: 828282;
+  	color: #828282;
 }
 
 table {
